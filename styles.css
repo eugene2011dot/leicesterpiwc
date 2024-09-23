@@ -31,6 +31,7 @@
 
 html{
  width: 100%;
+ overflow-x: hidden;
 }
 .home button {
     font-family: 'Inter';
