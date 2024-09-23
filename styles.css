@@ -1,18 +1,4 @@
-@media (max-width: 768px) {
-    .header, .nav {
-        max-height: auto;
-        padding: 20px;
-    }
 
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .form-group input, .form-group textarea {
-        width: 100%;
-    }
-}
 @keyframes wipe{
   0% { transform: translatey(-100px); }
     100% { transform: translatey(0px); }
@@ -21,7 +7,6 @@
 .header, .nav {
     background-image: linear-gradient(to right, rgb(82, 82, 195), rgb(53, 36, 184));
     font-family: 'Inter';
-    max-height: 200px;
     color: white;
     padding: 20px;
     font-weight: 900;
@@ -31,6 +16,16 @@
     left: 0;
     width: 100%;
     z-index: 1000;
+}
+.hamburger{
+  font-size: 30px;
+  margin-right: 50px;
+  display: none;
+  transition: color, font-size 0.3s ease;
+}
+.hamburger:hover{
+  color:#ffea00;
+  font-size: 35px;
 }
 html{
  
@@ -324,4 +319,25 @@ transition: font-size 0.3s ease
 .cookie-consent button:last-child {
     margin-left: 0;
     margin-right: 0;
+}
+@media screen and (max-width: 780px){
+  .nav-links{
+    display: none;
+    flex-direction: column;
+    background-color: rgba(85, 85, 195, 0.9);
+    position: absolute;
+    top: 110px;
+    right: 0;
+    width: 50%;
+    z-index: 1000;
+  }
+  .nav-links li{
+    margin-bottom: 15px;
+  }
+  .hamburger{
+    display: block;
+  }
+  .nav-links.active{
+    display: flex;
+  }
 }
