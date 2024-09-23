@@ -76,7 +76,7 @@ transition: font-size 0.3s ease
     height: auto;
     margin-top: 0px;
     font-size: large;
-    padding-left: 25px;
+    box-sizing: border-box;
     padding-top: 50px;
     padding-bottom: 50px;
   text-align: center;
