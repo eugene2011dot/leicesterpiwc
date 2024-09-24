@@ -4,169 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-            <div class="cookie-consent" id="cookieConsent">
-              <img src="https://iili.io/dgkEiBa.md.png">
-        We use cookies and similar methods to recognize visitors and remember their preferences. We also use them to measure ad campaign effectiveness, target ads and analyze site traffic.
-To learn more about these methods, including how to disable them, view our Cookie Policy. <p>Starting on January 1,2025 we will show you ads we think are relevant to your interests, based on the kinds of content you access in our Services.</p> You can object. For more info, see our privacy policy.
-By tapping 'accept,' you consent to the use of these methods by us and third parties. You can always change your tracker preferences by visiting our Cookie Policy.
-    <p><button onclick="acceptCookies()">Accept</button>
-    <button onclick="declineCookies()">Decline</button>
-</div>
-
-<script>
-    // Function to accept cookies and hide the banner
-    function acceptCookies() {
-        document.cookie = "cookiesAccepted=true; path=/; max-age=31536000"; // 1 year expiration
-        document.getElementById("cookieConsent").style.display = "none";
-    }
-
-    // Function to decline cookies and hide the banner
-    function declineCookies() {
-        document.cookie = "cookiesAccepted=false; path=/; max-age=31536000"; // 1 year expiration
-        document.getElementById("cookieConsent").style.display = "none";
-    }
-
-    // Check if the cookie has already been set
-    window.onload = function() {
-        if (document.cookie.includes("cookiesAccepted=true")) {
-            document.getElementById("cookieConsent").style.display = "none";
-        }
-    }
-</script>
-
-
-    <title>Leicester PIWC</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Leicester PIWC</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<!--Website designed and built by Pentecost International Worship Centre(PIWC), Leicester-->
-<body>
+<!-- Website designed and built by Pentecost International Worship Centre(PIWC), Leicester -->
+<body class="body">
     <header class="header">
         <nav class="nav-container">
             <article class="navigation">
                 <a class="logo" href="#">
-                <img src="https://iili.io/deSk4dN.md.png" style="width: 100%; max-height: 200;" alt="Leicester PIWC" border="0">
+                    <img src="https://iili.io/deSk4dN.md.png" style="width: 100%; max-height: 200;" alt="Leicester PIWC" border="0">
                 </a>
-              <ul class="nav-links">
-                <li><a class="nav-link" href="#home">Home</a></li>
-                <li><a class="nav-link" href="#about">About</a></li>
-                <li><a class="nav-link" href="#services">Services</a></li>
-                <li><a class="nav-link" href="#events">Events</a></li>
-                <li><a class="nav-link" href="#contact">Contact</a></li>
-                <li><a class="nav-link" href="https://forms.gle/7Dzdmu19pZexTU1Y8">Join Us</a></li>
-                <li><a class="nav-link" href="https://copuk.org/" target="_blank">COPUK</a></li>
-                <li><a class="nav-link" href="https://thecophq.org/" target="_blank">COPHQ</a></li>
-              </ul>
-              <div class="hamburger" onclick="toggleMenu()">
-                &#9776;
-              </div>
+                <ul class="nav-links">
+                    <li><a class="nav-link" href="#home">Home</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="#services">Services</a></li>
+                    <li><a class="nav-link" href="#events">Events</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                    <li><a class="nav-link" href="https://forms.gle/7Dzdmu19pZexTU1Y8">Join Us</a></li>
+                    <li><a class="nav-link" href="https://copuk.org/" target="_blank">COPUK</a></li>
+                    <li><a class="nav-link" href="https://thecophq.org/" target="_blank">COPHQ</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">
+                    &#9776;
+                </div>
             </article>
-          </nav>
+        </nav>
     </header>
-    <body class="body">
-        <section class="home"> 
-            <h1 class="h1">Welcome to <br>Leicester PIWC</h1>
-            <p id="welcome"><i>A vibrant place that feels like home</i></p>
-            <i><b><p id="welcome">New to Leicester?</p></i></b>
-            <button id="welcome"><a href="https://forms.gle/7Dzdmu19pZexTU1Y8" target="_blank">Help us know you more</a></button>
-        </section>
-        <section class="TOTM">
-            <h1 class="monththeme">THEME OF THE MONTH</h1><p class="month">September</p>
-          <section class="Theme-slot">
-            <img class="themepic"src="https://i.ibb.co/CwncbqV/September-theme-Presentation.png">
-          </section>
-        </section>
-        <section id="about">
-            <h1>About Us</h1>
-            <p>Leicester PIWC is a denominational church of the Church of Pentecost-UK.</p>
-            <button type="button">Read more</button>
-        </section>
-      <hr>
-        <section class="services">
-            <h1>Our Services</h1>
-          <hr>
-          <h2 id="sub">Sunday Worship</h2>
-                <p>We meet every Sunday at 10:30 am(UK)for worship.</p>
-                <h1> Watch our live stream</h1>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/Nlgf6ESXwjY?si=ILsbKiQakhigRu38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              
-                <li>Bible Study</li>
-                <li>Prayer Meeting</li>
-            </ul>
-        </section>
-        <section id="events">
-            <h1>Upcoming Events</h1>
-            <ul>
-                <li>Easter Sunday Service</li>
-                <li>Summer Camp</li>
-                <li>Christmas Concert</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h1>Get in Touch</h1>
-            <p>Would you like someone to talk to?
-                Get in touch with any of our elders, deacons(esses)
-            </p>
-        </section>
-        <h1>Looking for us?</h1>
-        <section class="location">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2421.262589984707!2d-1.1324999243445715!3d52.63716872754937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877611ecb51f993%3A0x64ea72a06a660e55!2sChurch%20of%20Pentecost%20-%20Leicester!5e0!3m2!1sen!2suk!4v1725713485680!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <article class="form-head">
-            <h2 class="Have-a-question">Have a question?</h2>
-            <p>Drop a message and we'll get back to you.<p>
-            <form class="form" action="https://formspree.io/f/mldrvabv" method="POST">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="name">Message:</label>
-                <textarea id="message" rows="5" required></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit">Submit</button>
-            </div>
-            </form>
-        </section>
-
-    </body>
-    <footer class="footer">
-        <article class="logohalf">
-            <a class="logo" href="#">
-            <img src="https://iili.io/deSk4dN.md.png" style="width: 247px; height: 70px;" alt="Leicester PIWC" border="0"></a>        
-        <p>Leicester PIWC, Kildare Street<br>
-        LE1 3FY<br>
-        Leicester, Leicestershire</p>
-        </article>
-<a class="foot-links" href="#home">Home</a><br>
-<a class="foot-links" href="#about">About</a><br>
-<a class="foot-links" href="#services">Services</a><br>
-<a class="foot-links" href="#events">Events</a><br>
-<a class="foot-links" href="#contact">Contact</a><br>
-<a class="foot-links" href="https://forms.gle/7Dzdmu19pZexTU1Y8">Join Us</a><br>
-<a class="foot-links" href="https://copuk.org/" target="_blank">COPUK</a><br>
-<a class="foot-links" href="https://thecophq.org/" target="_blank">COPHQ</a><br>              
-        <hr>
-        <section class="bottomhalf">
-        <p>&copy; 2024 Leicester PIWC</p>
-        <p>Follow us on Social Media</p>
-    <div class="socials">
-        <a href="https://www.facebook.com/LeicesterCityChurch/?locale=en_GB" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Facebook_white_icon_svg.svg/640px-Facebook_white_icon_svg.svg.png" width="40px" height="40px"></a>
-        <a href="https://www.instagram.com/leicesterpiwc" target="_blank"><img src="https://troyredfern.com/wp-content/uploads/2021/04/new-instagram-logo-white-border-icon-png-large.png" width="40px" height="40px"></a>
-        <a href="https://www.youtube.com/@leicesterpiwc" target="_blank"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/youtube-app-white-icon.png" width="40px" height="40px"></a>
+    
+    <div class="cookie-consent" id="cookieConsent">
+        <img src="https://iili.io/dgkEiBa.md.png">
+        We use cookies and similar methods to recognize visitors and remember their preferences. We also use them to measure ad campaign effectiveness, target ads, and analyze site traffic. To learn more about these methods, including how to disable them, view our Cookie Policy.
+        <p>Starting on January 1, 2025, we will show you ads we think are relevant to your interests, based on the kinds of content you access in our Services.</p> 
+        You can object. For more info, see our privacy policy. By tapping 'accept,' you consent to the use of these methods by us and third parties. You can always change your tracker preferences by visiting our Cookie Policy.
+        <p><button onclick="acceptCookies()">Accept</button>
+        <button onclick="declineCookies()">Decline</button></p>
     </div>
 
-    </section>
-    </footer>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
+        function acceptCookies() {
+            document.cookie = "cookiesAccepted=true; path=/; max-age=31536000";
+            document.getElementById("cookieConsent").style.display = "none";
+        }
+
+        function declineCookies() {
+            document.cookie = "cookiesAccepted=false; path=/; max-age=31536000";
+            document.getElementById("cookieConsent").style.display = "none";
+        }
+
+        window.onload = function() {
+            if (document.cookie.includes("cookiesAccepted=true")) {
+                document.getElementById("cookieConsent").style.display = "none";
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
@@ -175,5 +69,146 @@ By tapping 'accept,' you consent to the use of these methods by us and third par
     });
 });
     </script>
+
+    <section class="home">
+        <h1 class="h1">Welcome to <br>Leicester PIWC</h1>
+        <p id="welcome"><i>A vibrant place that feels like home</i></p>
+        <p id="welcome"><i><b>New to Leicester?</b></i></p>
+        <button id="welcome"><a href="https://forms.gle/7Dzdmu19pZexTU1Y8" target="_blank">Help us know you more</a></button>
+    </section>
+
+    <div class="marqueeback">
+        <marquee class="announcements">There is no current announcement.</marquee>
+    </div>
+
+    <section class="Cards-sec">
+        <section class="Cards">
+            <img class="themepic" src="https://i.ibb.co/CwncbqV/September-theme-Presentation.png">
+            <h1 class="monththeme">THEME OF THE MONTH</h1>
+            <p class="month">September</p>
+            <div class="card-link">
+              <a href="#">Learn More</a>
+          </div>
+        </section>
+      <section class="Cards">
+            <img class="themepic" src="https://copuk.org/wp-content/uploads/2024/06/xxprob-ovr-michael-mrs-abigail-asantewaa-frimpong-650x650.png,Mic.7cu8qqKiet.webp.pagespeed.ic.NXg-cD_oWT.webp">
+            <h1 class="monththeme">MEET OUR PASTOR </h1>
+        <p class="month">Ovr. Michael & Abigail Frimpong</p>
+            <div class="card-link">
+              <a href="#">Learn More</a>
+          </div>
+        </section>
+      <section class="Cards">
+            <img class="themepic" src="https://copuk.org/wp-content/uploads/2024/06/xxprob-ovr-michael-mrs-abigail-asantewaa-frimpong-650x650.png,Mic.7cu8qqKiet.webp.pagespeed.ic.NXg-cD_oWT.webp">
+            <h1 class="monththeme">MEET OUR PASTOR </h1>
+        <p class="month">Ovr. Michael & Abigail Frimpong</p>
+            <div class="card-link">
+              <a href="#">Learn More</a>
+          </div>
+        </section>
+      <section class="Cards">
+            <img class="themepic" src="https://copuk.org/wp-content/uploads/2024/06/xxprob-ovr-michael-mrs-abigail-asantewaa-frimpong-650x650.png,Mic.7cu8qqKiet.webp.pagespeed.ic.NXg-cD_oWT.webp">
+            <h1 class="monththeme">MEET OUR PASTOR </h1>
+        <p class="month">Ovr. Michael & Abigail Frimpong</p>
+            <div class="card-link">
+              <a href="#">Learn More</a>
+          </div>
+        </section>
+      <section class="VOTD">
+        <h1 class="monththeme">VERSE OF THE DAY</h1>
+        <p class="month">"For I know the plans I have for you declares the LORD"</p>
+        <p id="verse">Jeremiah 29:11</p>
+          </div>
+        </section>
+    </section>
+
+    <section id="about">
+        <h1>About Us</h1>
+        <p>Leicester PIWC is a denominational church of the Church of Pentecost-UK.</p>
+        <button type="button">Read more</button>
+    </section>
+    
+    <hr>
+
+    <section class="services">
+        <h1>Our Services</h1>
+        <hr>
+        <h2 id="sub">Sunday Worship</h2>
+        <p>We meet every Sunday at 10:30 am (UK) for worship.</p>
+        <h1>Watch our live stream</h1>
+        <iframe width="600" height="315" src="https://youtube.com/live/FIs7bMWqXT4?feature=share" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <ul>
+            <li>Bible Study</li>
+            <li>Prayer Meeting</li>
+        </ul>
+    </section>
+
+    <section id="events">
+        <h1>Upcoming Events</h1>
+        <ul>
+            <li>Easter Sunday Service</li>
+            <li>Summer Camp</li>
+            <li>Christmas Concert</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h1>Get in Touch</h1>
+        <p>Would you like someone to talk to? Get in touch with any of our elders or deacons(esses).</p>
+    </section>
+
+    <h1>Looking for us?</h1>
+
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2421.262589984707!2d-1.1324999243445715!3d52.63716872754937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877611ecb51f993%3A0x64ea72a06a660e55!2sChurch%20of%20Pentecost%20-%20Leicester!5e0!3m2!1sen!2suk!4v1725713485680!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <article class="form-head">
+            <h2 class="Have-a-question">Have a question?</h2>
+            <p>Drop a message and we'll get back to you.</p>
+            <form class="form" action="https://formspree.io/f/mldrvabv" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </article>
+    </section>
+
+    <footer class="footer">
+        <article class="logohalf">
+            <a class="logo" href="#">
+                <img src="https://iili.io/deSk4dN.md.png" style="width: 247px; height: 70px;" alt="Leicester PIWC" border="0">
+            </a>
+            <p>Leicester PIWC, Kildare Street<br>LE1 3FY<br>Leicester, Leicestershire</p>
+        </article>
+
+        <a class="foot-links" href="#home">Home</a><br>
+        <a class="foot-links" href="#about">About</a><br>
+        <a class="foot-links" href="#services">Services</a><br>
+        <a class="foot-links" href="#events">Events</a><br>
+        <a class="foot-links" href="#contact">Contact</a><br>
+
+        <p class="rights">© 2024 Pentecost International Worship Centre (PIWC) Leicester. All rights reserved.</p>
+
+        <article class="socials">
+            <a href="https://www.instagram.com/cop.lei/"><img src="https://iili.io/dEfURHb.md.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/cop.leicester/"><img src="https://iili.io/dEfUTcl.md.png" alt="Facebook"></a>
+            <a href="https://twitter.com/cop_lei"><img src="https://iili.io/dEfURHb.md.png" alt="Twitter"></a>
+        </article>
+    </footer>
 </body>
 </html>
