@@ -3,7 +3,14 @@
   0% { transform: translatey(-100px); }
     100% { transform: translatey(0px); }
 }
-
+@keyframes slide-in-from-top {
+  0% {
+    transform: translate(-50%, -100%); /* Start off-screen (y-axis: above viewport, x-axis: -50%) */
+  }
+  100% {
+    transform: translate(-50%, -0%); /* End at correct position (x-axis: -50%, y-axis: -50%) */
+  }
+}
 header{
   position: fixed;
   margin: auto;
@@ -25,6 +32,28 @@ header{
     width: 100%;
     z-index: 1000;
     border-radius: 20px;
+}
+.header.scrolled{
+  background-image: linear-gradient(to right, rgb(82, 82, 195), rgb(53, 36, 184));
+    color: white;
+    padding: 20px;
+    font-weight: 900;
+    text-decoration: none;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+    transform: translateX(-50%);
+    border-radius: 0px;
+    max-width: 100%;
+    margin: auto;
+    animation: slide-in-from-top 0.5s ease-out forwards;
+}
+.header.scrolled .logo{
+  padding-left: 20%;
+}
+.header.scrolled .nav-links{
+  padding-right: 20%;
 }
 .hamburger{
   font-size: 30px;
@@ -116,7 +145,7 @@ marquee{
 }
 
 .logo {
-    margin-right: 30px;
+    margin-right: 0px;
     max-width: 250px;
 }
 
@@ -175,6 +204,7 @@ marquee{
   transform: translateY(-5%);
     color: white;
   line-height: 0.7;
+  margin-bottom: 30px;
 }
 .Cards img{
   width: 100%;
@@ -230,10 +260,15 @@ marquee{
   z-index: 90;
   transform: translateY(-5%);
     color: white;
-  line-height: 0.7;
+  line-height: 1.5;
   padding: 30px;
+  text-align: center;
+  text-decoration: none;
 }
-
+.VOTD a{
+  text-decoration: none;
+  color: white;
+}
 .footer {
     background-image: linear-gradient(to right, rgb(82, 82, 195), rgb(21, 21, 115));
     color: white;
@@ -242,7 +277,18 @@ marquee{
     text-decoration: none;
     width: 100%;
 }
-
+.footer .fa{
+  font-size: 35px;
+  text-decoration: none;
+  color: white;
+}
+.fa-facebook:hover{
+  text-align: center;
+  color: #316FF6;
+}
+.fa-instagram:hover{
+  color: #fa7e1e;
+}
 .monththeme {
     font-family: 'Inter';
     font-weight: 900;
@@ -439,5 +485,18 @@ marquee{
   margin: auto;
   left: 0%;
   transform: translateX(0%);
+}
+.header.scrolled {
+    background-image: linear-gradient(to right, rgb(82, 82, 195), rgb(53, 36, 184));
+    color: white;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    transform: inherit;
+    border-radius: 20px;
+    animation: none;
+  }
+.header.scrolled .logo{
+  padding-left: 0%;
 }
 }
