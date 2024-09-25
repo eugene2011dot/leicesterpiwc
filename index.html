@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script> <!-- Added defer for script loading -->
     <title>Leicester PIWC</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<!-- Website designed and built by Pentecost International Worship Centre(PIWC), Leicester -->
 <body class="body">
     <header class="header">
         <nav class="nav-container">
             <article class="navigation">
                 <a class="logo" href="#">
-                    <img src="https://iili.io/deSk4dN.md.png" style="width: 100%; max-height: 200px;" alt="Leicester PIWC" border="0">
+                    <img src="https://iili.io/deSk4dN.md.png" style="width: 100%; max-height: 200;" alt="Leicester PIWC" border="0">
                 </a>
                 <ul class="nav-links">
                     <li><a class="nav-link" href="#home">Home</a></li>
@@ -24,7 +25,7 @@
                     <li><a class="nav-link" href="#services">Services</a></li>
                     <li><a class="nav-link" href="#events">Events</a></li>
                     <li><a class="nav-link" href="#contact">Contact</a></li>
-                    <li><a class="nav-link" href="https://forms.gle/7Dzdmu19pZexTU1Y8" target="_blank">Join Us</a></li>
+                    <li><a class="nav-link" href="https://forms.gle/7Dzdmu19pZexTU1Y8">Join Us</a></li>
                     <li><a class="nav-link" href="https://copuk.org/" target="_blank">COPUK</a></li>
                     <li><a class="nav-link" href="https://thecophq.org/" target="_blank">COPHQ</a></li>
                 </ul>
@@ -36,10 +37,10 @@
     </header>
 
     <div class="cookie-consent" id="cookieConsent">
-        <img src="https://iili.io/dgkEiBa.md.png" alt="Cookie Consent">
-        <p>We use cookies and similar methods to recognize visitors and remember their preferences. We also use them to measure ad campaign effectiveness, target ads, and analyze site traffic. To learn more about these methods, including how to disable them, view our Cookie Policy.</p>
+        <img src="https://iili.io/dgkEiBa.md.png">
+        We use cookies and similar methods to recognize visitors and remember their preferences. We also use them to measure ad campaign effectiveness, target ads, and analyze site traffic. To learn more about these methods, including how to disable them, view our Cookie Policy.
         <p>Starting on January 1, 2025, we will show you ads we think are relevant to your interests, based on the kinds of content you access in our Services.</p>
-        <p>You can object. For more info, see our privacy policy. By tapping 'accept,' you consent to the use of these methods by us and third parties. You can always change your tracker preferences by visiting our Cookie Policy.</p>
+        You can object. For more info, see our privacy policy. By tapping 'accept,' you consent to the use of these methods by us and third parties. You can always change your tracker preferences by visiting our Cookie Policy.
         <p>
             <button onclick="acceptCookies()">Accept</button>
             <button onclick="declineCookies()">Decline</button>
@@ -62,7 +63,6 @@
                 document.getElementById("cookieConsent").style.display = "none";
             }
         }
-
         document.addEventListener('DOMContentLoaded', () => {
             const hamburger = document.querySelector('.hamburger');
             const navLinks = document.querySelector('.nav-links');
@@ -71,8 +71,7 @@
                 navLinks.classList.toggle('active');
             });
         });
-
-        window.addEventListener('scroll', function () {
+        window.addEventListener('scroll', function() {
             var header = document.querySelector('.header'); // Targeting your specific header class
 
             // Check if the page is scrolled down more than 50 pixels
@@ -97,7 +96,7 @@
 
     <section class="Cards-sec">
         <section class="Cards">
-            <img class="themepic" src="https://i.ibb.co/CwncbqV/September-theme-Presentation.png" alt="Theme of the Month">
+            <img class="themepic" src="https://i.ibb.co/CwncbqV/September-theme-Presentation.png">
             <h1 class="monththeme">THEME OF THE MONTH</h1>
             <p class="month">September</p>
             <div class="card-link">
@@ -105,37 +104,37 @@
             </div>
         </section>
         <section class="Cards">
-            <img class="themepic" src="https://copuk.org/wp-content/uploads/2024/06/xxprob-ovr-michael-mrs-abigail-asantewaa-frimpong-650x650.png,Mic.7cu8qqKiet.webp.pagespeed.ic.NXg-cD_oWT.webp" alt="Meet Our Pastor">
-            <h1 class="monththeme">MEET OUR PASTOR</h1>
+            <img class="themepic" src="https://copuk.org/wp-content/uploads/2024/06/xxprob-ovr-michael-mrs-abigail-asantewaa-frimpong-650x650.png,Mic.7cu8qqKiet.webp.pagespeed.ic.NXg-cD_oWT.webp">
+            <h1 class="monththeme">MEET OUR PASTOR </h1>
             <p class="month">Ovr. Michael & Abigail Frimpong</p>
             <div class="card-link">
                 <a href="#">Learn More</a>
             </div>
         </section>
         <section class="Cards">
-            <img class="themepic" src="https://copuk.org/wp-content/uploads/2024/06/xxprob-ovr-michael-mrs-abigail-asantewaa-frimpong-650x650.png,Mic.7cu8qqKiet.webp.pagespeed.ic.NXg-cD_oWT.webp" alt="Meet the Leadership">
-            <h1 class="monththeme">MEET THE LEADERSHIP</h1>
+            <img class="themepic" src="https://copuk.org/wp-content/uploads/2024/06/xxprob-ovr-michael-mrs-abigail-asantewaa-frimpong-650x650.png,Mic.7cu8qqKiet.webp.pagespeed.ic.NXg-cD_oWT.webp">
+            <h1 class="monththeme">MEET THE LEADERSHIP </h1>
             <p class="month">Leicester PIWC Elders and deacons</p>
             <div class="card-link">
                 <a href="#">Learn More</a>
             </div>
         </section>
         <section class="Cards">
-            <img class="themepic" src="https://i.ibb.co/h1kSjsQ/Whats-App-Image-2024-07-07-at-15-54-54-4.jpg" alt="News & Announcements">
-            <h1 class="monththeme">NEWS & ANNOUNCEMENTS</h1>
+            <img class="themepic" src="https://i.ibb.co/h1kSjsQ/Whats-App-Image-2024-07-07-at-15-54-54-4.jpg">
+            <h1 class="monththeme">NEWS & ANNOUNCEMENTS </h1>
             <div class="card-link">
                 <a href="#">Learn More</a>
             </div>
         </section>
-    </section>
-
-    <section class="VOTD">
-        <h1 class="monththeme">VERSE OF THE DAY</h1>
-        <script src="https://www.biblegateway.com/votd/votd.write.callback.js"></script>
-        <script src="https://www.biblegateway.com/votd/get/?format=json&version=NIV&callback=BG.votdWriteCallback"></script>
-        <noscript>
-            <iframe framespacing="0" frameborder="no" src="https://www.biblegateway.com/votd/get/?format=html&version=NIV">View Verse of the Day</iframe>
-        </noscript>
+        <section class="VOTD">
+            <h1 class="monththeme">VERSE OF THE DAY</h1>
+            <script src="https://www.biblegateway.com/votd/votd.write.callback.js"></script>
+            <script src="https://www.biblegateway.com/votd/get/?format=json&version=NIV&callback=BG.votdWriteCallback"></script>
+            <!-- alternative for no javascript -->
+            <noscript>
+                <iframe framespacing="0" frameborder="no" src="https://www.biblegateway.com/votd/get/?format=html&version=NIV">View Verse of the Day</iframe>
+            </noscript>
+        </section>
     </section>
 
     <section id="about">
@@ -153,31 +152,77 @@
         <p>We meet every Sunday at 10:30 am (UK) for worship.</p>
         <h1>Watch our live stream</h1>
         <iframe width="600" height="315" src="https://youtube.com/live/FIs7bMWqXT4?feature=share" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <h1>Join our events</h1>
-        <button type="button"><a href="events.html">View Events</a></button>
+        <ul>
+            <li>Bible Study</li>
+            <li>Prayer Meeting</li>
+        </ul>
     </section>
 
-    <footer class="footer">
-        <article class="logohalf">
-            <a class="logo" href="#">
-                <img src="https://iili.io/deSk4dN.md.png" style="width: 247px; height: 70px;" alt="Leicester PIWC" border="0">
-            </a>
-            <p>Leicester PIWC, Kildare Street<br>LE1 3FY<br>Leicester, Leicestershire</p>
-        </article>
+    <section id="events">
+    <h1>Upcoming Events</h1>
+    <ul>
+        <li>Easter Sunday Service</li>
+        <li>Summer Camp</li>
+        <li>Christmas Concert</li>
+    </ul>
+</section>
 
+<section id="contact">
+    <h1>Get in Touch</h1>
+    <p>Would you like someone to talk to? Get in touch with any of our elders or deacons(esses).</p>
+</section>
+
+<section class="location">
+    <h1>Looking for us?</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2421.262589984707!2d-1.1324999243445715!3d52.63716872754937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877611ecb51f993%3A0x64ea72a06a660e55!2sChurch%20of%20Pentecost%20-%20Leicester!5e0!3m2!1sen!2suk!4v1725713485680!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <article class="form-head">
+        <h2 class="Have-a-question">Have a question?</h2>
+        <p>Drop a message and we'll get back to you.</p>
+        <form class="form" action="https://formspree.io/f/mldrvabv" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </article>
+</section>
+
+<footer class="footer">
+    <article class="logohalf">
+        <a class="logo" href="#">
+            <img src="https://iili.io/deSk4dN.md.png" style="width: 247px; height: 70px;" alt="Leicester PIWC" border="0">
+        </a>
+        <p>Leicester PIWC, Kildare Street<br>LE1 3FY<br>Leicester, Leicestershire</p>
+    </article>
+
+    <nav class="footer-navigation">
         <a class="foot-links" href="#home">Home</a><br>
         <a class="foot-links" href="#about">About</a><br>
         <a class="foot-links" href="#services">Services</a><br>
         <a class="foot-links" href="#events">Events</a><br>
         <a class="foot-links" href="#contact">Contact</a><br>
+    </nav>
 
-        <p class="rights">© 2024 Pentecost International Worship Centre (PIWC) Leicester. All rights reserved.</p>
-<hr>
-        <article class="socials">
-            <a class="fa fa-facebook" href="https://www.facebook.com/LeicesterCityChurch/"></a>
-            <a class="fa fa-instagram" href="https://www.instagram.com/leicesterpiwc/"></a>
-            <a class="fa fa-youtube" href="https://www.youtube.com/@leicesterpiwc"></a>
-        </article>
-    </footer>
-</body>
-</html>
+    <p class="rights">© 2024 Pentecost International Worship Centre (PIWC) Leicester. All rights reserved.</p>
+    <hr>
+    <article class="socials">
+        <a class="fa fa-facebook" href="https://www.facebook.com/LeicesterCityChurch/"></a>
+        <a class="fa fa-instagram" href="https://www.instagram.com/leicesterpiwc/"></a>
+        <a class="fa fa-youtube" href="https://www.youtube.com/@leicesterpiwc"></a>
+    </article>
+</footer>
