@@ -211,9 +211,8 @@ marquee{
   height: 70%;
   object-fit: cover;
 }
-.cards-sec{
+.Cards-sec{
   display: flex;
-  flex-wrap: wrap;
 }
 .card-link{
   text-align: center;
