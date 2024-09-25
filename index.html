@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,6 +69,17 @@
         navLinks.classList.toggle('active');
     });
 });
+      window.addEventListener('scroll', function() {
+  var header = document.querySelector('.header'); // Targeting your specific header class
+
+  // Check if the page is scrolled down more than 50 pixels
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
     </script>
 
     <section class="home">
@@ -100,26 +112,29 @@
         </section>
       <section class="Cards">
             <img class="themepic" src="https://copuk.org/wp-content/uploads/2024/06/xxprob-ovr-michael-mrs-abigail-asantewaa-frimpong-650x650.png,Mic.7cu8qqKiet.webp.pagespeed.ic.NXg-cD_oWT.webp">
-            <h1 class="monththeme">MEET OUR PASTOR </h1>
-        <p class="month">Ovr. Michael & Abigail Frimpong</p>
+            <h1 class="monththeme">MEET THE LEADERSHIP </h1>
+        <p class="month">Leicester PIWC Elders and deacons</p>
             <div class="card-link">
               <a href="#">Learn More</a>
           </div>
         </section>
       <section class="Cards">
-            <img class="themepic" src="https://copuk.org/wp-content/uploads/2024/06/xxprob-ovr-michael-mrs-abigail-asantewaa-frimpong-650x650.png,Mic.7cu8qqKiet.webp.pagespeed.ic.NXg-cD_oWT.webp">
-            <h1 class="monththeme">MEET OUR PASTOR </h1>
-        <p class="month">Ovr. Michael & Abigail Frimpong</p>
+            <img class="themepic" src="https://i.ibb.co/h1kSjsQ/Whats-App-Image-2024-07-07-at-15-54-54-4.jpg">
+            <h1 class="monththeme">NEWS & ANNOUNCEMENTS </h1>
             <div class="card-link">
               <a href="#">Learn More</a>
           </div>
         </section>
       <section class="VOTD">
         <h1 class="monththeme">VERSE OF THE DAY</h1>
-        <p class="month">"For I know the plans I have for you declares the LORD"</p>
-        <p id="verse">Jeremiah 29:11</p>
-          </div>
+        <script src="https://www.biblegateway.com/votd/votd.write.callback.js"></script>
+<script src="https://www.biblegateway.com/votd/get/?format=json&version=NIV&callback=BG.votdWriteCallback"></script>
+<!-- alternative for no javascript -->
+<noscript>
+<iframe framespacing="0" frameborder="no" src="https://www.biblegateway.com/votd/get/?format=html&version=NIV">View Verse of the Day</iframe>
+</noscript>
         </section>
+      
     </section>
 
     <section id="about">
@@ -203,11 +218,11 @@
         <a class="foot-links" href="#contact">Contact</a><br>
 
         <p class="rights">© 2024 Pentecost International Worship Centre (PIWC) Leicester. All rights reserved.</p>
-
+<hr>
         <article class="socials">
-            <a href="https://www.instagram.com/cop.lei/"><img src="https://iili.io/dEfURHb.md.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com/cop.leicester/"><img src="https://iili.io/dEfUTcl.md.png" alt="Facebook"></a>
-            <a href="https://twitter.com/cop_lei"><img src="https://iili.io/dEfURHb.md.png" alt="Twitter"></a>
+            <a class="fa fa-facebook" href="https://www.facebook.com/LeicesterCityChurch/"></a>
+            <a class="fa fa-instagram" href="https://www.instagram.com/leicesterpiwc/"></a>
+            <a class="fa fa-youtube" href="https://www.youtube.com/@leicesterpiwc"></a>
         </article>
     </footer>
 </body>
