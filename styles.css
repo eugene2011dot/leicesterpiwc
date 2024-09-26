@@ -381,7 +381,7 @@ marquee{
     justify-content: center;
     text-align: left;
     overflow: hidden;
-  display: none;
+  display: flex;
 }
 
 .cookie-consent img {
