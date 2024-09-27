@@ -28,7 +28,7 @@ header{
 .header, .nav {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(102, 102, 102, 0.5));
     font-family: 'Inter';
-    max-width: 1000px;
+    max-width: 1100px;
     width: 100%;
     color: white;
     font-weight: 900;
@@ -275,6 +275,30 @@ marquee{
 .VOTD a{
   text-decoration: none;
   color: white;
+}
+.about {
+    background-image: url('https://previews-te.wetransfer.net/file/wetransfer/j1oc/slybpozkjl811tcrx20240922172342/s2l146tu164qbiu1w20240922172416?width=2048&height=2048&source=spaceship&origin=collect-free&quiet=true&s=056619df9e78dc762103f086274bca3bb595961b&Expires=1727461645&Signature=DnZmec4MXOQwRkHhTtxs2dNYG1Dx2r6ChuI5LS3XcfJAjw8U8HrKHEjWAQd8kzJptYxGatnPHzDnXtlzyn6cFJvNB8nc87aHSbEQAXf8yFz-sbInxApMrKxBZVx71s79YZR~J5Ex215I65xT5IsZZYNhWBPw1AS6j~rMwqK5X79qlFByenMEO68izS-yk3VW38AH45qqVLYjNaLvVGDFvnu2shjoGOBOJPPFuC~iV4IycaSeyuRbl7sxptVttCqe0bA4fRxOz9EzVoOpmnhjUPdkVX~KM7MipgqTcnHPnXZZecpVr5RMlOKWss0IySHfqPAhNUfy69rkQmowLrs78g__&Key-Pair-Id=APKAIRLQFERKGUWFG7GQ');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: large;
+    padding-top: 300px;
+  text-align: center;
+  top: 0;
+}
+.about a{
+  text-decoration: none;
+  color: white;
+}
+.abt-text{
+  position: relative;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0)0%, rgba(0,0,0,0.5)50%, rgba(0,0,0,1)100%);
+  padding-left:50px;
+  padding-right:50px;
+  padding-bottom:50px;
+}
+.about h1{
+  font-weight: 900;
 }
 .footer {
     background-image: linear-gradient(to right, rgb(82, 82, 195), rgb(21, 21, 115));
