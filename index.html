@@ -8,25 +8,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="favicon.png" type: "image/png">
+    <link rel="icon" href="src/images/favicon.png" type: "image/png">
     <title>Leicester PIWC</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/styles.css">
 </head>
 <!-- Website designed and built by Pentecost International Worship Centre(PIWC), Leicester -->
 <body class="body">
     <header class="header">
         <nav class="nav-container">
             <article class="navigation">
-                <a class="logo" href="#">
+                <a class="logo" href="index.html">
                     <img src="https://iili.io/deSk4dN.md.png" style="width: 100%; max-height: 200;" alt="Leicester PIWC" border="0">
                 </a>
                 <ul class="nav-links">
-                    <li><a class="nav-link" href="#home">Home</a></li>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
                     <li><a class="nav-link" href="#about">About</a></li>
-                    <li><a class="nav-link" href="#services">Services</a></li>
-                    <li><a class="nav-link" href="#events">Events</a></li>
-                    <li><a class="nav-link" href="#contact">Contact</a></li>
-                    <li><a class="nav-link" href="#sermons">Sermons</a></li>
+                    <li><a class="nav-link" href="services.html">Services</a></li>
+                    <li><a class="nav-link" href="events.html">Events</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li><a class="nav-link" href="sermon.html">Sermons</a></li>
                     <li><a class="nav-link" href="https://forms.gle/7Dzdmu19pZexTU1Y8">Join Us</a></li>
                     <li><a class="nav-link" href="https://copuk.org/" target="_blank">COPUK</a></li>
                     <li><a class="nav-link" href="https://thecophq.org/" target="_blank">COPHQ</a></li>
@@ -49,47 +49,11 @@
         </p>
     </div>
 
-    <script>
-        function acceptCookies() {
-            document.cookie = "cookiesAccepted=true; path=/; max-age=31536000";
-            document.getElementById("cookieConsent").style.display = "none";
-        }
-
-        function declineCookies() {
-            document.cookie = "cookiesAccepted=false; path=/; max-age=31536000";
-            document.getElementById("cookieConsent").style.display = "none";
-        }
-
-        window.onload = function() {
-            if (document.cookie.includes("cookiesAccepted=true")) {
-                document.getElementById("cookieConsent").style.display = "none";
-            }
-        }
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-
-            hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-        });
-        window.addEventListener('scroll', function() {
-            var header = document.querySelector('.header'); // Targeting your specific header class
-
-            // Check if the page is scrolled down more than 50 pixels
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    </script>
-
     <section class="home">
         <h1 class="h1">Welcome to <br>Leicester PIWC</h1>
         <p id="welcome"><i>A vibrant place that feels like home</i></p>
         <p id="welcome"><i><b>New to Leicester?</b></i></p>
-        <button id="welcome"><a href="https://forms.gle/7Dzdmu19pZexTU1Y8" target="_blank">Help us know you more</a></button>
+        <button id="welcome"><a href="https://forms.gle/7Dzdmu19pZexTU1Y8" target="_blank">Help us know you more</a></button> <button id="live"><a href="live.html">Watch Live</a></button>
     </section>
 
     <div class="marqueeback">
@@ -110,7 +74,7 @@
             <h1 class="monththeme">MEET OUR PASTOR </h1>
             <p class="month">Ovr. Michael & Abigail Frimpong</p>
             <div class="card-link">
-                <a href="#">Learn More</a>
+                <a href="src/pastor.html">Learn More</a>
             </div>
         </section>
         <section class="Cards">
@@ -167,6 +131,12 @@
         <h1>Our Services</h1>
         <hr>
         <h2 id="sub">Sunday Worship</h2>
+        <div id="countdown">
+            <span id="days" class="timer-part">0d</span>
+            <span id="hours" class="timer-part">0h</span>
+            <span id="minutes" class="timer-part">0m</span>
+            <span id="seconds" class="timer-part">0s</span>
+        </div>
         <p>We meet every Sunday at 10:30 am (UK) for worship.</p>
         <h1>Watch our live stream</h1>
 <iframe width="560" height="315" 
@@ -179,7 +149,7 @@ frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; pict
         </ul>
     </section>
 
-    <section id="events">
+    <section id="home-events">
     <h1>Upcoming Events</h1>
     <ul>
         <li>Easter Sunday Service</li>
@@ -187,7 +157,20 @@ frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; pict
         <li>Christmas Concert</li>
     </ul>
 </section>
+<section id="serve">
+    <h1>Would you like to join any of the teams and groups in the church?</h1>
+    <details>
+        <summary>Teams and Groups</summary>
+        <ul>
+            <li><a href="music.html">Music Team</a></li>
+            <li><a href="prayer.html">Prayer Team</a></li>
+            <li><a href="media.html">Media Team</a></li>
+            <li><a  href="children.html">Children's Team</a></li>
+            <li><a href="hospitality.html">Hospitality Team</a></li>
+        </ul>
 
+    </details>
+</section>
 <section id="contact">
     <h1>Get in Touch</h1>
     <p>Would you like someone to talk to? Get in touch with any of our elders or deacons(esses).</p>
@@ -222,24 +205,6 @@ frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; pict
         </form>
     </article>
 </section>
-<!-- Facebook Page Plugin Code -->
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v17.0" nonce="Y8EDnv3g"></script>
-
-  <!-- Facebook Page Feed Embed -->
-  <div class="fb-page" 
-    data-href="https://www.facebook.com/LeicesterCityChurch" 
-    data-tabs="timeline" 
-    data-width="500" 
-    data-height="" 
-    data-small-header="false" 
-    data-adapt-container-width="true" 
-    data-hide-cover="false" 
-    data-show-facepile="true">
-    <blockquote cite="https://www.facebook.com/LeicesterCityChurch" class="fb-xfbml-parse-ignore">
-      <a href="https://www.facebook.com/LeicesterCityChurch">Leicester PIWC</a>
-    </blockquote>
-  </div>
 <footer class="footer">
     <article class="logohalf">
         <a class="logo" href="#">

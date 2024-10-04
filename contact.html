@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="src/images/favicon.png" type: "image/png">
+    <title>Contact Us-Leicester PIWC</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <article class="navigation">
+                <a class="logo" href="index.html">
+                    <img src="https://iili.io/deSk4dN.md.png" style="width: 100%; max-height: 200;" alt="Leicester PIWC" border="0">
+                </a>
+                <ul class="nav-links">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="services.html">Services</a></li>
+                    <li><a class="nav-link" href="events.html">Events</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li><a class="nav-link" href="sermon.html">Sermons</a></li>
+                    <li><a class="nav-link" href="https://forms.gle/7Dzdmu19pZexTU1Y8">Join Us</a></li>
+                    <li><a class="nav-link" href="https://copuk.org/" target="_blank">COPUK</a></li>
+                    <li><a class="nav-link" href="https://thecophq.org/" target="_blank">COPHQ</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">
+                    &#9776;
+                </div>
+            </article>
+        </nav>
+    </header>
+    <div class="Contact">
+        <div id="Contact">
+            <h1>Contact Us</h1>
+        </div>
+    </div>
+    <div class="contactus">
+        <h1>Send us an Email</h1>
+        <form class="cont" action="https://formspree.io/f/mldrvabv" method="POST">
+            <div class="cont-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+
+            <div class="cont-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="cont-group">
+                <label for="message">Message:</label>
+                <textarea id="message" rows="5" required></textarea>
+            </div>
+            <div class="cont-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" required>
+            </div>
+
+            <div class="cont-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <div id="continfo"><i class="fa fa-phone"></i><h3>Give Us a Call</h3></div>
+    </div>
