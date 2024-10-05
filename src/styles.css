@@ -250,6 +250,7 @@ marquee{
 }
 .Cards-sec{
   display: flex;
+  flex-wrap: wrap;
 }
 .card-link{
   text-align: center;
@@ -306,7 +307,7 @@ marquee{
   color: white;
 }
 #about {
-  background-image: url('https://previews-te.wetransfer.net/file/wetransfer/j1oc/slybpozkjl811tcrx20240922172342/s2l146tu164qbiu1w20240922172416?width=2048&height=2048&source=spaceship&origin=collect-free&quiet=true&s=056619df9e78dc762103f086274bca3bb595961b&Expires=1727630365&Signature=DI4rf1e0fCp2GRxrtomqhTuP4iHSmtfqCpgDeMQRzmk7O5mZwScYzwWCAVum-x~3G0hkb171sfL88jv-M0dm-UctmjeWfskFDRhH9vy7yFhg9oAanWM4T7IIdEtORFv2bZkgHX2IDUs3q3tFqgwIA9CBI1a4Fs3R16z5c3HNXZ0luAB6s-2oqI~iaV007OwkZD9qiIYbqyg5cu2QHIAH4U2squDpg1IW2YXWO5AwL01zyyqEZaIpzNvAHFyHd99BUW35MDCzrT36OgqjZq3crVW~3qSt7SwndRxHdJKV4B04BrM1Lt6xbQIAxj47kfiijyBy7r2vzgCWu2sMraxLnA__&Key-Pair-Id=APKAIRLQFERKGUWFG7GQ');
+  background-image: url('IMG_3501.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -350,6 +351,86 @@ marquee{
   display: inline-flex;
   position: relative;
   padding: 20px;
+}
+#serve{
+  background-color: rgb(41, 41, 145);
+  height: 50%;
+  max-height: 400px;
+  padding: 5px;
+  margin-bottom: 200px;
+}
+.serve-box{
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+#serve #serve-title{
+  color: white;
+  text-align: center;
+  font-weight: 900;
+}
+.serve-card {
+  background-color: rgb(85, 85, 195);
+  background-position: center;
+  object-fit: cover;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+  margin-left: 50px;
+  box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  z-index: 90;
+  transform: translateY(15%);
+    color: white;
+  line-height: 0.7;
+  margin-bottom: 30px;
+}
+.serve-card img{
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+.serve-link{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  margin: auto;
+}
+.serve-link a{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  margin: auto;
+}
+.serve-card a:hover {
+    color: #ffea00;
+    font-size: 20px;
+    transition: font size 0.30s ease-in-out;
+  font-weight: 900;
+}
+
+.serve-card a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 7px;
+    background-color: #ffea00;
+    transition: width 0.30s ease;
+}
+
+.serve-card a:hover::after {
+    width: 100%;
+}
+.serve-card {
+  transition: transform 1s ease;
+}
+.serve-card:hover {
+  transform: translateY(2%);
+  transform: scale(1.07);
 }
 .footer {
     background-image: linear-gradient(to right, rgb(82, 82, 195), rgb(21, 21, 115));
@@ -528,7 +609,13 @@ marquee{
 }
 .services{
   text-decoration: none;
-  line-height:10px
+  line-height:10px;
+  text-align:  center;
+
+}
+.services p{
+  text-align: center;
+  font-size: larger;
 }
 .TOTM{
   line-height:10px;
@@ -549,7 +636,7 @@ marquee{
 }
 .services #sub{
   text-align: center;
-  font-weight; 900;
+  font-weight: 900;
 }
 .cookie-consent button:hover {
     background-color: blue;
@@ -560,13 +647,17 @@ marquee{
     margin-right: 0;
 }
 .Sermon {
-  background: url('images\pastor.png');
-  background-size: cover;
-  background-position-y: -200px;
-  background-position-x: 50px;
+  width: 100%;
+  height: 100%;
+  font-weight: 900;
+  background-image: url('IMG_3553.jpg');
+  background-size:cover;
+  background-position: center;
+  background-position-y: -270px;
   font-family: 'Inter';
   color: white;
   z-index: 30000;
+  background-repeat: no-repeat;
 }
 #Sermon{
   font-size: 30px;
@@ -580,24 +671,29 @@ marquee{
   padding-top: 300px;
 }
 .Sermon h1{
-  transform: translateX(-300%);
+  position: absolute;
+  left: 0;
+  padding-left: 15px;
 }
 .Services{
   width: 100%;
+  height: 100%;
   font-weight: 900;
-  background-image: url('https://previews-te.wetransfer.net/file/wetransfer/j1oc/sbkiw00umomfyp10l20240630191026/sirb2oza4u22mn7nn20240630191854?width=2048&height=2048&source=spaceship&origin=collect-free&quiet=true&s=b3a9b37c801ea661dfee1905812964587107c6df&Expires=1727631250&Signature=OIhecBnMV08Iak9TNMewG6czblUQ6H~Fn5RtAQXC3RLVNncEfHdqdzCBNymtdWwqaMLptXlUty2KwdPzDe1TxQCViSQQSCBka5XJJXuWol6Kx~Q7F~F6b3ulw~2ymugKpgmduxipNRfGy4HprwdU67aC2Q9~zpq1MDEsQ4GdOAtbik6L-kpqBn1u5i-Hmd09DsGco2OxODioRRx0zpgH8r1KNUVHUtpMTbesbK0YHzi2NSJdwrp5P5IRvAiae~cDd6hXlJIV40gvUiDO-XD5iiIPcDCexZAVxe636nGK4kZ4YDqAK~shJcooGWCJ1KrGeIZyk-s~8VTc7Ed8GZC~xA__&Key-Pair-Id=APKAIRLQFERKGUWFG7GQ');
-  background-size: cover;
-  background-position-y: -100px;
-  background-position-x: 50px;
+  background-image: url('IMG_9941.jpg');
+  background-size:cover;
+  background-position: center;
+  background-position-y: -270px;
   font-family: 'Inter';
   color: white;
   z-index: 30000;
+  background-repeat: no-repeat;
 }
 #Services{
   font-size: 30px;
   background: linear-gradient(to left, rgba(0, 0, 0, 0)0%, rgba(0,0,0,0.5)50%, rgba(0,0,0,1)100%);
   position: relative;
   height: 200px;
+  width: 100%;
   padding-left: 50px;
   justify-content: center;
   display: flex;
@@ -605,16 +701,19 @@ marquee{
   padding-top: 300px;
 }
 .Services h1{
-  transform: translateX(-300%);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-left: 30px;
 }
 .events{
   width: 100%;
   font-weight: 900;
-  background-image: url('https://previews-te.wetransfer.net/file/wetransfer/j1oc/sg44jrxnc3qil7ywb20240729120002/s997yl67a1zgc7azj20240729122635?width=2048&height=2048&source=spaceship&origin=collect-free&quiet=true&s=73892ded1e0fad32e411cf367e231d8b55e4593f&Expires=1727719566&Signature=CxJ2dx8Qf9pSL76lsokCYsVINRYGAffSmiQ1wwjDw5XUxdvz08u0~qZTn5s2cj-Psy~Uy9071ijjkCM0I9e6wXMAivjb1SIvC3CG3mGKDDr0jiOjXPR~pgHaRNxVzLC-0XlgLGOwPTIV5j4mbOPtUI0CIjIgBeHKhnqIvqeKeXNCtFzLTv5TYwOn8Ef7I95DJ9S2DekVRhlqZebS6BvzIWOo7HNYluoI1k9ZuU0gBAR6~VIPeeCN2P~K8Qt5D4k7wH6X0kB8RmxnJySzqyBaMvq2409TVX36YaIgyioXXzS51kj7Bf7VsjbkVXmjoVBgirgZag9m0roD4nVtV-l4vw__&Key-Pair-Id=APKAIRLQFERKGUWFG7GQ');
-  background-size: fill;
+  background-image: url('IMG_0807.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
   background-position-y: -300px;
-  background-position-x: 50px;
+  background-position:center;
   font-family: 'Inter';
   color: white;
   z-index: 30000;
@@ -633,11 +732,16 @@ marquee{
   line-height: 0%;
 }
 .events h1{
-  transform: translateX(-300%);
+  position: absolute;
+  left: 0;
+  bottom: 100;
 }
 .events h2{
-  transform: translateX(-28%);
+  position: absolute;
+  left: 0;
   font-weight:300;
+  margin-top: 150px;
+  line-height: normal;
 }
 .event {
   display: flex;
@@ -681,10 +785,10 @@ marquee{
 .Contact{
   width: 100%;
   font-weight: 900;
-  background-image: url('https://previews-te.wetransfer.net/file/wetransfer/j1oc/sg44jrxnc3qil7ywb20240729120002/s796dxaj5jd4vixui20240729121019?width=2048&height=2048&source=spaceship&origin=collect-free&quiet=true&s=04c818bf7899c6ab6a6c57219bf0d5fc670cc090&Expires=1727734695&Signature=IR72Hg7JzmA-Q9EbTzPaSw5eWZXGHFxF5l5QJcWE-eERIWLGkvykSl8GilCS1ErmtKmx9E~PvfCpFXTFUH~44YMRYdtXzC2CzUxXh2OSCKSA4e0CTZNRiCXQT2t-G1G7q8pMcC1jVDWLNwyymivIH2rUIi0zhXarl-DdIdKFhUoRTXFzkgdmfB0LfXkra7m7RZQ3yE7Pl6zdiJD7cPxfBaZDf77LFCRF0ouNl53fi0laJRdECa7KtP4-TkQvdTXDSrNBCStcCoTZL-bJPtoGZr330MHQYyzS~8Ys8QpjGd6MN0T6uY-wSTRVdOxpunZdqQcVomgryLkGSsJig-0u0Q__&Key-Pair-Id=APKAIRLQFERKGUWFG7GQ');
+  background-image: url('IMG_0661.jpg');
   background-size: cover;
-  background-position-y: -2px;
-  background-position-x: 50px;
+  background-position-y: 0px;
+  background-position-x: center;
   font-family: 'Inter';
   color: white;
   z-index: 30000;
@@ -712,6 +816,141 @@ marquee{
 #continfo{
   display: inline-flex;
   font-size: xx-large;
+}
+.Media {
+  width: 100%;
+  height: 100%;
+  font-weight: 900;
+  background-image: url('IMG_3539.jpg');
+  background-size:cover;
+  background-position: center;
+  font-family: 'Inter';
+  color: white;
+  z-index: 30000;
+  background-repeat: no-repeat;
+}
+#Media{
+  font-size: 30px;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0)0%, rgba(0,0,0,0.5)50%, rgba(0,0,0,1)100%);
+  position: relative;
+  height: 200px;
+  padding-left: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding-top: 300px;
+}
+.Media h1{
+  position: absolute;
+  left: 0;
+  padding-left: 15px;
+}
+.Music {
+  width: 100%;
+  height: 100%;
+  font-weight: 900;
+  background-image: url('IMG_0815.jpg');
+  background-size:cover;
+  background-position: center;
+  font-family: 'Inter';
+  color: white;
+  z-index: 30000;
+  background-repeat: no-repeat;
+}
+#Music{
+  font-size: 30px;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0)0%, rgba(0,0,0,0.5)50%, rgba(0,0,0,1)100%);
+  position: relative;
+  height: 200px;
+  padding-left: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding-top: 300px;
+}
+.Music h1{
+  position: absolute;
+  left: 0;
+  padding-left: 15px;
+}
+.Hosp {
+  width: 100%;
+  height: 100%;
+  font-weight: 900;
+  background-image: url('IMG_0975.jpg');
+  background-size:cover;
+  background-position: center;
+  font-family: 'Inter';
+  color: white;
+  z-index: 30000;
+  background-repeat: no-repeat;
+}
+#Hosp{
+  font-size: 30px;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0)0%, rgba(0,0,0,0.5)50%, rgba(0,0,0,1)100%);
+  position: relative;
+  height: 200px;
+  padding-left: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding-top: 300px;
+}
+.Hosp h1{
+  position: absolute;
+  left: 0;
+  padding-left: 15px;
+}
+.Child {
+  width: 100%;
+  height: 100%;
+  font-weight: 900;
+  background-image: url('IMG_7955.jpg');
+  background-size:cover;
+  background-position: center;
+  font-family: 'Inter';
+  color: white;
+  z-index: 30000;
+  background-repeat: no-repeat;
+}
+#Child{
+  font-size: 30px;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0)0%, rgba(0,0,0,0.5)50%, rgba(0,0,0,1)100%);
+  position: relative;
+  height: 200px;
+  padding-left: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding-top: 300px;
+}
+.Child h1{
+  position: absolute;
+  left: 0;
+  padding-left: 15px;
+}
+.mediainfo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: auto;
+}
+.mediainfo img{
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  border-radius: 10px;
+}
+#media-team h2{
+    font-weight: 800;
+    font-size: xx-large;
+    text-align: center;
+}
+#media-team p{
+  font-size: large;
+  padding-left: 20px;
 }
 .videos{
   display: flex;
@@ -863,5 +1102,31 @@ marquee{
   }
 .header.scrolled .logo{
   padding-left: 0%;
+}
+.Services{
+  background-position-y:0;
+}
+.Sermon {
+  width: 100%;
+  height: 100%;
+  font-weight: 900;
+  background-image: url('IMG_3553.jpg');
+  background-size:cover;
+  background-position: center;
+  background-position-y: 0;
+  font-family: 'Inter';
+  color: white;
+  z-index: 30000;
+  background-repeat: no-repeat;
+}
+.mediainfo {
+  flex-direction: column;
+}
+.event-details {
+  padding-left: 0;
+  padding-top: 20px;
+}
+.mediainfo img {
+  max-width: 100%;
 }
 }
