@@ -286,16 +286,14 @@ marquee{
     width: 100%;
 }
 .VOTD{
-  width: 100%;
-  margin-left: 50px;
-  margin-right: 50px;
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 50px;
   background-color: #722f37;
   position: relative;
     overflow: hidden;
     border-radius: 20px;
   box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.3);
-  z-index: 90;
-  transform: translateY(-5%);
     color: white;
   line-height: 1.5;
   padding: 30px;
@@ -438,7 +436,7 @@ marquee{
     font-family: 'Inter';
     padding: 20px;
     text-decoration: none;
-    width: 100%;
+    width: auto;
 }
 .footer .fa{
   font-size: 35px;
@@ -576,18 +574,7 @@ marquee{
     text-align: center;
     overflow: hidden;
     z-index: 2000;
-    transform: translateX(0%), translateY(100%);
     animation: slide-in-from-bottom 1s ease;
-}
-
-.cookie-consent img {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.1;
-    z-index: 1;
 }
 
 .cookie-consent p {
@@ -1128,5 +1115,37 @@ marquee{
 }
 .mediainfo img {
   max-width: 100%;
+}
+.home {
+  padding-top: 100px; /* Adjust padding to fit the content on smaller screens */
+}
+
+.Cards {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px; /* Adjust card size and margin */
+}
+
+#countdown {
+  width: 90%; /* Adjust countdown width */
+  font-size: xx-large;
+}
+
+/* Adjust VOTD Section */
+.VOTD {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: medium;
+  padding: 20px;
+}
+
+/* Adjust Serve Section */
+#serve {
+  max-height: 300px;
+}
+
+.serve-card {
+  width: 90%;
+  margin: 10px auto;
 }
 }
