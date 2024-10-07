@@ -243,6 +243,10 @@ marquee{
   line-height: 0.7;
   margin-bottom: 30px;
 }
+.Cards a{
+  color: white;
+  text-decoration: none;
+}
 .Cards img{
   width: 100%;
   height: 70%;
@@ -256,6 +260,7 @@ marquee{
   text-align: center;
   text-decoration: none;
   color: white;
+  transition: font-size 0.30s ease-in-out;
   margin: auto;
 }
 .card-link a{
@@ -264,11 +269,10 @@ marquee{
   color: white;
   margin: auto;
 }
-.Cards a:hover {
-    color: #ffea00;
-    font-size: 20px;
-    transition: font size 0.30s ease-in-out;
+.card-link:hover {
+  color: #ffea00;
   font-weight: 900;
+  font-size: 20px;
 }
 
 .Cards a::after {
@@ -352,13 +356,14 @@ marquee{
 }
 #serve{
   background-color: rgb(41, 41, 145);
-  height: 50%;
-  max-height: 400px;
+  height: auto;
+  min-height: 400px;
   padding: 5px;
   margin-bottom: 200px;
 }
 .serve-box{
   display: flex;
+  flex-wrap: wrap;
   margin: auto;
   align-items: center;
   justify-content: center;
@@ -1113,7 +1118,7 @@ marquee{
     color: white;
     padding: 20px;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     transform: none;
     border-radius: 20px;
     animation: none;
@@ -1291,5 +1296,34 @@ marquee{
 }
 .cookie-consent {
 display: none;
+}
+.serve-box {
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center;
+  margin: auto; /* Center the cards */
+}
+
+.serve-card {
+  width: 90%;
+  height: 250px;
+/* z-index: 90; */ /* This line is commented out or removed */
+  margin-left: 0;
+  margin-right: 0; /* Remove left margin */
+  margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+.serve-card img {
+  height: 60%; /* Adjust image height */
+}
+
+#serve #serve-title {
+  font-size: 1.5rem; /* Adjust font size for mobile */
+}
+#serve{
+  background-color: rgb(41, 41, 145);
+  height: 50%;
+  max-height:none;
+  padding: 5px;
+  margin-bottom: 10px;
 }
 }
