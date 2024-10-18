@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="src/favicon.png" type: "image/png">
+    <title>Leicester PIWC</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<!-- Website designed and built by Pentecost International Worship Centre(PIWC), Leicester -->
+    <header class="storeheader">
+        <nav class="nav-container" style="width: 250px;">
+            <div class="navigation" style="display: flex; align-items: center; justify-content: space-between;">
+                <!-- Logo -->
+                <a class="storelogo" href="index.html" style="display: flex; align-items: center;">
+                    <img src="https://iili.io/deSk4dN.md.png" style="max-height: 300px; width: 100%;" alt="Leicester PIWC">
+                </a>
+    
+                <!-- Vertical Line -->
+                <div class="vertical-line" style="border-left: 1px  solid #ffffff; height: 50px;"></div>
+                <a href="store.html" style="text-decoration: none; color: white; font-size: 20px; padding-left: 10px;">
+                    Store
+                </a>
+            </div>
+        </nav>
+        <ul class="nav-links" style="position: absolute; right: 0;">
+            <li><a class="nav-link" href="index.html">Leicester PIWC</a></li>
+            <hr id="storeheadline">
+            <li><a class="nav-link" href="#about">Christmas</a></li>
+            <li><a class="nav-link" href="services.html">Bibles</a></li>
+            <li><a class="nav-link" href="events.html">Merchandise</a></li>
+            <li><a class="nav-link" href="contact.html">Gifts</a></li>
+            <li><a class="nav-link" href="sermon.html">Deals</a></li>
+            <li><a class="nav-link" href="store.html">Books</a></li>
+            <li><a class="fa fa-user" href="signup.html" style="font-size: xx-large;"></a></li>
+            <li><a class="fa fa-shopping-cart"style="font-size: xx-large;"></a></li>
+            <li><a class="fa fa-question-circle"style="font-size: xx-large;"></a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <div class="search-container">
+            <input type="search" placeholder="Search the store">
+            <i class="fa fa-search search-icon"></i>
+    </header>
+
+<body style="margin-top: 20px; overflow-x: hidden;">
+    <div class="greetingstore">
+        <div id="greetingstore">
+            <p style="font-size: xxx-large;">Welcome<br> <strong>Eugene!</strong></p>
+            <p>What are we getting today?</p>
+        </div>
+        
+    </div>
+    <div class="groupbar">Our Featured Items</div>
+        <div class="groups">
+            <div class="shopgroup"style="background-image: url('src/PENSA\ UK (1).png'); background-repeat: no-repeat; background-size: cover; background-position: center; background-position-y: -5%;">
+
+                <div id="shopgroup-title">Leicester PIWC Merchandise </div>
+                <div id="shopgroup-img" ></div>
+            </div>
+            <div class="shopgroup"style="background-image: url('src/bibles.png'); background-repeat: no-repeat; background-size: cover; background-position: center; background-position-y: -5%;">
+
+                <div id="shopgroup-title">Bibles & Bible Study Guides </div>
+                <div id="shopgroup-img" ></div>
+            </div>
+            <div class="shopgroup"style="background-image: url('src/Noel-with-background.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; background-position-y: -5%;">
+
+                <div id="shopgroup-title">Christmas </div>
+                <div id="shopgroup-img" ></div>
+            </div>
+            <div class="shopgroup"style="background-image: url('src/christian-gifts-for-kids-christ-forgave-ewe-mens-t-shirt.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; background-position-y: -5%;">
+
+                <div id="shopgroup-title">Children </div>
+                <div id="shopgroup-img" ></div>
+            </div>
+        </div>
+    <div class="shopitems">
+
+        <div class="item">
+            <div class="item-image"><img src="src/images.jpeg" title="ESV Bible"></div>
+            <div class="item-name">English Standard Version Bible</div>
+            <div class="item-price">£0.00</div>
+            <div class="item-short">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+            <div class="item-button"><button>Add to Cart</button></div>
+
+    
+        </div>
+    </div>
+    <div class="payment">
+        <h1>We accept the following payment methods: </h1>
+        <img src="src/googlepay.png">
+        <img src="src/applepay.png">
+        <img src="src/Mastercard.png">
+        <img src="src/paypal.png">
+        <img src="src/visa.png">
+    </div>
+</body>
