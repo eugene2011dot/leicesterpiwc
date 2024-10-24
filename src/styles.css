@@ -1026,8 +1026,12 @@ marquee{
 }
 .ministers{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
   flex-wrap: wrap;
   background-color: #f9f9f9;
+  line-height: 20px;
 }
 #minister{
   width: 400px;
@@ -1037,10 +1041,17 @@ marquee{
   display: flex;
   flex-direction: column;
   border-radius: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
-#minister img{
+#minimg{
   width:400px;
-  height:350px;
+  height: 350px;
+  overflow: hidden;
+}
+#minimg img{
+  width:400px;
+  height:500px;
   object-fit: cover;
 }
 #ministerinfo{
@@ -1051,6 +1062,7 @@ marquee{
 }
 #ministerinfo h3{
   font-weight: 900;
+  margin-bottom: 0;
 }
 #ministersocials{
   display: flex;
@@ -1066,6 +1078,80 @@ marquee{
 }
 #ministersocials .fa:hover{
   transform: scale(1.15);
+}
+.media-warning {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #f5c6cb;
+  margin: 10px auto;
+  max-width: 800px;
+  border-radius: 8px;
+}
+.media-warning h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+.media-warning p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+.media-warning a {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: bold;
+}
+.media-warning a:hover {
+  text-decoration: underline;
+}
+.toty-abt{
+  position: relative;
+}
+#toty-info{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,  -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+  opacity:0;
+  transition: opacity  0.5s;
+}
+.toty-abt:hover  #toty-info{
+  opacity:1;
+}
+.ministries{
+  display: flex;
+  background-color: rgb(41, 41, 145);
+  color: white;
+  width: 100%;
+}
+.ministries ul{
+  display: flex;
+  color: white;
+  gap: 20px;
+  text-align: center;
+}
+.ministries img{
+  width:200px;
+  height: 200px;
+  object-fit: contain;
+  background-color: white;
+  clip-path: circle(50%);
+  padding: 25px;
+}
+img [src="src/youthlogo.png"]{
+  display: none;
 }
 .Music h1{
   position: absolute;
@@ -1465,7 +1551,7 @@ transition: background-color 0.3s ease;
   padding-left: 0%;
 }
 #homelive{
-  width:100px;
+  width:90%;
 }
 .Services{
   background-position-y:0;
@@ -1756,5 +1842,43 @@ display: none;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.About {
+  width: 100%;
+  height: 700px;
+  font-weight: 900;
+  background-image: url('Untitled\ design\ \(4\).png');
+  background-size:cover;
+  background-position: center;
+  font-family: 'Inter';
+  color: white;
+  z-index: 30000;
+  background-repeat: no-repeat;
+}
+.toty-abt{
+  position: absolute;
+  width: 100vw;
+}
+.toty-abt img{
+  width: 100vw;
+}
+#toty-info{
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  text-align: center;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+  opacity:1;
+  transition: none;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, 0%);
+}
+.toty-abt:hover  #toty-info{
+opacity:none;
 }
 }
