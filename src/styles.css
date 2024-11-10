@@ -1500,6 +1500,7 @@ transition: background-color 0.3s ease;
   html{
     flex-direction: column;
     width: 100vw;
+    margin-right: 0;
   }
   .nav-links{
     display: none;
@@ -1530,7 +1531,7 @@ transition: background-color 0.3s ease;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 1000;
 }
   header{
@@ -1542,7 +1543,7 @@ transition: background-color 0.3s ease;
     color: white;
     padding: 20px;
     position: fixed;
-    width: 100vw;
+    width: 100%;
     transform: none;
     border-radius: 20px;
     animation: none;
@@ -1552,6 +1553,7 @@ transition: background-color 0.3s ease;
 }
 #homelive{
   width:90%;
+  justify-content: center;
 }
 .Services{
   background-position-y:0;
@@ -1584,16 +1586,19 @@ transition: background-color 0.3s ease;
 }
 
 .Cards {
+  display: none;
   width: 90%;
   margin: auto;
   margin-bottom: 20px; /* Adjust card size and margin */
 }
-
+.Cards-sec{
+  display: none;
+}
 #countdown {
-  width: 90%; /* Adjust countdown width */
+  width: 50%; /* Adjust countdown width */
   font-size: xx-large;
 }
-
+.form input, .form textarea{width: 50vw;}
 /* Adjust VOTD Section */
 .VOTD {
   margin-left: 10px;
@@ -1756,8 +1761,8 @@ display: none;
 }
 .livechat {
   background-color: rgb(255, 255, 255);
-  width: 100vw;
-  height: 80vh;
+  width: 100%;
+  height: 80%;
   position: relative;
   bottom: 0;
   left: 0;
@@ -1791,7 +1796,7 @@ display: none;
   background-repeat: no-repeat;
 }
 .signup-container{
-  width: 80vw;
+  width: 80%;
   padding: 10px;
 }
 #signuplogo img{
@@ -1880,5 +1885,12 @@ display: none;
 }
 .toty-abt:hover  #toty-info{
 opacity:none;
+}
+.beliefs{
+  display: flex;
+  flex-direction: column;
+}
+#belief-info, #belief-info h2{
+  text-align: center;
 }
 }
