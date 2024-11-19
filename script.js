@@ -59,7 +59,7 @@ function updateTimer() {
         setTimeout(() => {
             // Reset the timer to the next Sunday
             resetTimerForNextSunday();
-        }, 6200000); // 2 hours in milliseconds
+        }, 6200000); 
     }
 }
 

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown to 2025</title>
+    <!-- Google Fonts: Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Center countdown on the screen */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #333; /* Dark background to make the red stand out */
+            margin: 0;
+            gap: 50px;
+        }
+
+        /* Countdown container */
+        .countdown-container {
+    background: linear-gradient(to bottom, #C8102E, #8B0000); /* Adjust colors to match the subtle red gradient */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adds a slight shadow for depth */
+    position: relative;
+    overflow: hidden;
+}
+
+ 
+
+        /* Title styling */
+        .countdown-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        /* Countdown display styling */
+        #countdown {
+            display: flex;
+            justify-content: space-between;
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        /* Styling each unit (days, hours, etc.) */
+        #countdown span {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 10px;
+            position: relative;
+        }
+
+        /* Separator line between units */
+        #countdown span:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 20%;
+            height: 60%;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.6), transparent);
+        }
+
+        /* Label for each unit (DAYS, HOURS, etc.) */
+        .unit-label {
+            font-size: 12px;
+            font-weight: 400;
+            margin-top: 5px;
+        }
+
+        /* Bottom section with date */
+        .countdown-date {
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 20px;
+            position: relative;
+            color: white;
+        }
+
+        /* Line above the date */
+        .countdown-date::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150%;
+            height: 2px;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+        }
+        .christmas-countdown-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Countdown display styling */
+#Christmas {
+    display: flex;
+    justify-content: space-between;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* Styling each unit (days, hours, etc.) */
+#Christmas span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+}
+
+/* Separator line between units */
+#Christmas span:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 20%;
+    height: 60%;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.6), transparent);
+}
+
+/* Label for each unit (DAYS, HOURS, etc.) */
+.christmas-unit-label {
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+/* Bottom section with date */
+.christmas-countdown-date {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 20px;
+    position: relative;
+    color: white;
+}
+
+/* Line above the date */
+.christmas-countdown-date::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+}
+
+    </style>
+</head>
+<body>
+    <div class="countdown-container">
+        <div class="countdown-title">Countdown to 2025</div>
+        <div id="countdown"></div>
+        <div class="countdown-date">January 1, 2025</div>
+    </div>
+    <div class="countdown-container">
+        <div class="countdown-title">Countdown to Christmas</div>
+        <div id="Christmas"></div>
+        <div class="countdown-date">December 25, 2024</div>
+    </div>
+
+    <script>
+        // New Year Countdown
+const newYearTargetDate = new Date("Jan 1, 2025 00:00:00").getTime();
+
+const newYearCountdownFunction = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = newYearTargetDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML = 
+        `<span>${days}<div class="unit-label">DAYS</div></span>` +
+        `<span>${hours}<div class="unit-label">HOURS</div></span>` +
+        `<span>${minutes}<div class="unit-label">MINUTES</div></span>` +
+        `<span>${seconds}<div class="unit-label">SECONDS</div></span>`;
+
+    if (distance < 0) {
+        clearInterval(newYearCountdownFunction);
+        document.getElementById("countdown").innerHTML = "HAPPY NEW YEAR! 2025";
+    }
+}, 1000);
+
+// Christmas Countdown
+const christmasTargetDate = new Date("Dec 25, 2024 00:00:00").getTime();
+
+const christmasCountdownFunction = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = christmasTargetDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("Christmas").innerHTML = 
+        `<span>${days}<div class="unit-label">DAYS</div></span>` +
+        `<span>${hours}<div class="unit-label">HOURS</div></span>` +
+        `<span>${minutes}<div class="unit-label">MINUTES</div></span>` +
+        `<span>${seconds}<div class="unit-label">SECONDS</div></span>`;
+
+    if (distance < 0) {
+        clearInterval(christmasCountdownFunction);
+        document.getElementById("Christmas").innerHTML = "It's Christmas!";
+    }
+}, 1000);
+
+    </script>
+</body>
+</html>

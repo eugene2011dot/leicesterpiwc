@@ -52,6 +52,11 @@ header{
     z-index: 1000;
     border-radius: 20px;
 }
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
 .header.scrolled{
   background-image: linear-gradient(to right, rgb(82, 82, 195), rgb(53, 36, 184));
     color: white;
@@ -445,7 +450,7 @@ marquee{
   transform: translateY(2%);
   transform: scale(1.07);
 }
-.footer {
+/*.footer {
     background-image: linear-gradient(to right, rgb(82, 82, 195), rgb(21, 21, 115));
     color: white;
     font-family: 'Inter';
@@ -464,6 +469,82 @@ marquee{
 }
 .fa-instagram:hover{
   color: #fa7e1e;
+}*/
+.footer {
+  background-image: linear-gradient(to right, rgb(82, 82, 195), rgb(21, 21, 115));
+  color: white;
+  font-family: 'Inter';
+  padding: 20px;
+  text-decoration: none;
+  width: 100dvw;
+  overflow-x: hidden;
+  border-radius: 20px 20px 0 0; 
+}
+.footer-info{
+  display: flex;
+  justify-content: center;
+}
+#footer-group{
+  margin-right: 10%;
+}
+#footer-group h2{
+  font-weight: 900;
+}
+#footer-group ul{
+  list-style-type:none ;
+  text-decoration: none;
+  color: white;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 10px;
+  
+}
+#footer-group a, #footer-group ul li{
+  color: #ffffffff;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+#footer-group a:hover{
+  color: #ffea00;
+}
+#footer-group .fa{
+  font-size: 35px;
+  text-decoration: none;
+  color: #0056b3;
+  background-color: white;
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  align-items: center;
+  justify-items: center;
+}
+.logohalf{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.logohalf img{
+  margin-right: 0px;
+  max-width: 380px;
+}
+#footer-close{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+#footer-close p{
+  font-size: 14px;
+}
+#footer-close a{
+  text-decoration: none;
+  color: white;
+  opacity: 0.5;
+  transition: opacity ease 0.5s;
+}
+#footer-close a:hover{
+  opacity: 1;
 }
 .monththeme {
     font-family: 'Inter';
@@ -550,7 +631,7 @@ marquee{
     padding-left: 30px;
 }
 
-.logohalf {
+/*.logohalf {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -574,7 +655,7 @@ marquee{
 
 .socials a:last-child {
     margin-right: 0;
-}
+}*/
 
 .cookie-consent {
     background-image: linear-gradient(to right, rgb(85, 85, 195), rgb(85, 85, 195));
@@ -864,29 +945,42 @@ marquee{
   width: 100%;
   height: 100%;
   font-weight: 900;
-  background-image: url('IMG_0815.jpg');
-  background-size:cover;
-  background-position: center;
+  background-image: url('FLY-9-2.jpg');
+  background-size: cover;
+  background-position-y: 10%;
   font-family: 'Inter';
   color: white;
   z-index: 30000;
   background-repeat: no-repeat;
+  text-align: center;
+
+  /* Flexbox centring */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
+
+
 #Music{
   font-size: 30px;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0)0%, rgba(0,0,0,0.5)50%, rgba(0,0,0,1)100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0)0%, rgba(0,0,0,0.5)50%, rgba(0,0,0,1)100%);
   position: relative;
   height: 200px;
-  padding-left: 50px;
+  width: 100%;
+  padding-left: 0;
   justify-content: center;
   display: flex;
+  flex-direction: center;
   align-items: center;
   padding-top: 300px;
+  text-align: center;
 }
-.Music h1{
-  position: absolute;
-  left: 0;
-  padding-left: 15px;
+.Music h1 {
+  font-size: 70px;
+  text-align: center;
+  width: 100%;
 }
 .Hosp {
   width: 100%;
@@ -1892,5 +1986,87 @@ opacity:none;
 }
 #belief-info, #belief-info h2{
   text-align: center;
+}
+.footer {
+  background-image: linear-gradient(to right, rgb(82, 82, 195), rgb(21, 21, 115));
+  color: white;
+  font-family: 'Inter';
+  padding: 20px;
+  text-decoration: none;
+  width: 100dvw;
+  overflow-x: hidden;
+  border-radius: 20px 20px 0 0; 
+}
+.footer-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#footer-group{
+  margin-right: 10%;
+}
+#footer-group h2{
+  font-weight: 900;
+  text-align: center;
+}
+#footer-group ul{
+  list-style-type:none ;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 10px;
+  
+}
+#footer-group a, #footer-group ul li{
+  color: #ffffffff;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+#footer-group a:hover{
+  color: #ffea00;
+}
+#footer-group .fa{
+  font-size: 35px;
+  text-decoration: none;
+  color: #ffffffff;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px;
+  width: 100%;
+  height: 30px;
+  border-radius: 0%;
+  align-items: center;
+  justify-items: center;
+}
+.socials{
+  display: flex;
+}
+.logohalf{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.logohalf img{
+  margin-right: 0px;
+  max-width: 380px;
+}
+#footer-close{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+#footer-close p{
+  font-size: 14px;
+}
+#footer-close a{
+  text-decoration: none;
+  color: white;
+  opacity: 0.5;
+  transition: opacity ease 0.5s;
+}
+#footer-close a:hover{
+  opacity: 1;
 }
 }
