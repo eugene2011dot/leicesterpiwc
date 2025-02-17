@@ -100,3 +100,15 @@ fetch('header.html')
             .catch(error => console.error('Error loading header:', error));
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const imageSource = "src/feb - theme of the month (Presentation).png"; // Path to the image
+
+    // Get the image element by its ID
+    const imageElement = document.getElementById("themepic");
+    if (imageElement) {
+        imageElement.src = imageSource; // Set the source of the image
+    }
+});
+const currentYear = new Date().getFullYear();
+
+    document.getElementById("cyear").textContent = currentYear;

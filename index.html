@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,6 +39,15 @@
         </nav>
     </header>
 
+    <!--<div class="cookie-consent" id="cookieConsent">
+        We use cookies and similar methods to recognize visitors and remember their preferences. We also use them to measure ad campaign effectiveness, target ads, and analyze site traffic. To learn more about these methods, including how to disable them, view our Cookie Policy.
+        <p>Starting on January 1, 2025, we will show you ads we think are relevant to your interests, based on the kinds of content you access in our Services.</p>
+        You can object. For more info, see our privacy policy. By tapping 'accept,' you consent to the use of these methods by us and third parties. You can always change your tracker preferences by visiting our Cookie Policy.
+        <p>
+            <button onclick="acceptCookies()">Accept</button>
+            <button onclick="declineCookies()">Decline</button>
+        </p>
+    </div!-->
     <div class="cookie-consent" id="cookieConsent">
         We use cookies and similar methods to recognize visitors and remember their preferences. We also use them to measure ad campaign effectiveness, target ads, and analyze site traffic. To learn more about these methods, including how to disable them, view our Cookie Policy.
         <p>Starting on January 1, 2025, we will show you ads we think are relevant to your interests, based on the kinds of content you access in our Services.</p>
@@ -58,15 +67,15 @@
 
     <section class="Cards-sec">
         <section class="Cards">
-          <a href="#">
-            <img class="themepic" src="src/theme of the month - november (Presentation).png">
+          <a href="totm.html">
+            <img id="themepic" style="object-fit: contain;">
             <h1 class="monththeme">THEME OF THE MONTH</h1>
-            <p class="month">November</p>
-            <div class="card-link" id="TOTM">Learn More</div>
+            <p class="month">February</p>
+            <div class="card-link" id="TOTM"><a href="totm.html" class="card-link">Learn More</a></div>
           </a>
         </section>
         <section class="Cards">
-          <a href="src/pastor.html">
+          <a href="pastor.html">
             <img class="themepic" src="https://copuk.org/wp-content/uploads/2024/06/xxprob-ovr-michael-mrs-abigail-asantewaa-frimpong-650x650.png,Mic.7cu8qqKiet.webp.pagespeed.ic.NXg-cD_oWT.webp">
             <h1 class="monththeme">MEET OUR PASTOR</h1>
             <p class="month">Ovr. Michael & Abigail Frimpong</p>
@@ -82,7 +91,7 @@
           </a>
         </section>
         <section class="Cards">
-          <a href="#">
+          <a href="announcements.html">
             <img class="themepic" src="https://i.ibb.co/h1kSjsQ/Whats-App-Image-2024-07-07-at-15-54-54-4.jpg">
             <h1 class="monththeme">NEWS & ANNOUNCEMENTS</h1>
             <div class="card-link">Learn More</div>
@@ -149,26 +158,46 @@
             <span id="hours" class="timer-part">0h</span>
             <span id="minutes" class="timer-part">0m</span>
             <span id="seconds" class="timer-part">0s</span>
+            <p style="font-size: smaller;">Next Sunday: <span id="next-sunday"></span></p>
         </div>
-        <p>We meet every Sunday at 10:30 am (UK) for worship.</p>
+        <script>
+            function getNextSunday() {
+                const today = new Date();
+                const nextSunday = new Date();
+                nextSunday.setDate(today.getDate() + ((7 - today.getDay()) % 7 || 7)); // Move to next Sunday
+        
+                const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+                return nextSunday.toLocaleDateString('en-GB', options); // Format the date
+            }
+        
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById("next-sunday").textContent = getNextSunday();
+            });
+        </script>
+        
+        
         <h1>Watch our live stream</h1>
 <iframe id="homelive" width="560" height="315" 
 src="https://www.youtube.com/embed/live_stream?channel=UCEirtQPI4vk8jUgMNBiIoaw" 
 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
-        <ul>
-            <li>Bible Study</li>
-            <li>Prayer Meeting</li>
-        </ul>
     </section>
 
     <section id="home-events">
     <h1>Upcoming Events</h1>
-    <ul>
-        <li>Easter Sunday Service</li>
-        <li>Summer Camp</li>
-        <li>Christmas Concert</li>
-    </ul>
+    <div class="home-events">
+        <div class="home-event">
+            <img src="src/CROSS (Presentation).png" class="home-event-img">
+            <div class="home-event-content">
+                <div class="home-event-content-inner">
+                    <h1>Wealth Conference</h1>
+                    <p>Join us for a day of teaching and inspiration as we explore the biblical principles of wealth creation</p>
+                    <p>Date:26th October, 2024</p>
+                    <a href="events.html">Read More</a>        
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <section id="serve">
     <h1 id="serve-title">Would you like to join any of the teams and groups in the church?</h1>
@@ -210,7 +239,6 @@ frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; pict
         </section>
     </div>
 </section>
-<iframe src="Countdown to 2025.html" style="width: 100%; height: 300px;"></iframe>
 <section id="contact">
     <h1>Get in Touch</h1>
     <p>Would you like someone to talk to? Get in touch with any of our elders or deacons(esses).</p>
@@ -270,7 +298,7 @@ frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; pict
                 <li><a href="#">Children</a></li>
                 <li><a href="#">Youth</a></li>
                 <li><a href="#">Men</a></li>
-                <li><a href="#">Women</a></li>
+                <li><a href="women.html">Women</a></li>
                 <li><a href="#">Missions</a></li>
                 <li><a href="#">Prayer</a></li>
             </ul>
@@ -281,6 +309,7 @@ frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; pict
                 <li><a href="https://copuk.org">Church of Pentecost UK</a></li>
                 <li><a href="https://thecophq.org">Church of Pentecost HQ</a></li>
                 <li><a href="#">Prayer Requests</a></li>
+                <li><a href="#">Give</a></li>
             </ul>
         </span>
     </span>
@@ -299,10 +328,10 @@ frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; pict
     </p>
 
     <span id="footer-close">
-        <p>© 2024 PIWC Leicester. All rights reserved.</p><p>  |</p>
-        <a href="#">Privacy Policy</a><p>  |</p>
-        <a href="#">Terms & Conditions</a><p>  |</p>
-        <a href="#">Social Media Disclaimer</a>
+        <span>©</span><span id="cyear"></span><span> PIWC Leicester. All rights reserved.</span><p>  |</p>
+        <a href="privacy.html">Privacy Policy</a><p>  |</p>
+        <a href="socialmedia.html">Social Media Disclaimer</a><p>  |</p>
+        <a href="#">Terms & Conditions</a>
     </span>
     
 </article>

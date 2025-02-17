@@ -370,6 +370,36 @@ marquee{
   position: relative;
   padding: 20px;
 }
+.home-event {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  overflow: hidden;
+  position: relative; /* Make it the positioning context */
+}
+
+.home-event-content {
+  width: 100%;
+  background-image: linear-gradient(to left, #000000, #000000, #000000, #000000,#000000,#00000059, #ffffff00);
+  z-index: 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-event-img {
+  position: absolute; /* Position it within the .home-event */
+  width: 700px; 
+  height: 400px; 
+  object-fit: cover;
+  z-index: 1; /* Ensure it's behind the content */
+}
+.home-event-content-inner{
+  position: relative;
+  left: 70;
+}
 #serve{
   background-color: rgb(41, 41, 145);
   height: auto;
@@ -756,7 +786,8 @@ marquee{
 .Sermon h1{
   position: absolute;
   left: 0;
-  padding-left: 15px;
+  bottom: 0;
+  padding-left: 30px;
 }
 .Services{
   width: 100%;
@@ -817,11 +848,15 @@ marquee{
 .events h1{
   position: absolute;
   left: 0;
-  bottom: 100;
+  bottom: 0;
+  padding-left: 30px;
+  padding-bottom: 80px;
 }
 .events h2{
   position: absolute;
   left: 0;
+  bottom: 0;
+  padding-left: 30px;
   font-weight:300;
   margin-top: 150px;
   line-height: normal;
@@ -874,7 +909,7 @@ marquee{
     background-position: top;
     font-family: 'Inter';
     color: white;
-    z-index: 30000;
+    z-index: 0;
     background-repeat: no-repeat;
 }
 #Contact{
@@ -1303,47 +1338,6 @@ img [src="src/youthlogo.png"]{
 .live{
   display: flex;
 }
-.livechat {
-  background-color: rgb(255, 255, 255);
-  width: 800px;
-  height: 80vh;
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  margin: 50px;
-  box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.3);
-  transform: translateY(-5%);
-  color: rgb(0, 0, 0);
-  line-height: 0.7;
-  margin-bottom: 30px;
-  text-align: center;
-  padding: 10px;
-  margin-top: 150px;
-  font-family: 'Inter';
-}
-#liveinput{
-  display:flex;
-  width: 100%;
-  height: auto;
-  bottom: 0;
-  left: 0;
-  position:absolute;
-  margin-bottom: 20px;
-}
-#liveinput label{
-  font-size:10px;
-}
-#liveinput textarea{
-  height: 50px;
-  width: 300px;
-}
-#liveinput svg{
-  fill: #ffea00;
-  width: 50px;
-  height: 50px;
-  margin-left: 20px;
-  transform: translateX(-40%);
-}
 #send{
   background-color: rgb(85, 85, 195);
   border-radius: 50%;
@@ -1408,6 +1402,53 @@ header{
   border-radius: 5px;
   cursor:pointer;
 
+}
+.Privacy {
+  width: 100%;
+  height: 100%;
+  font-weight: 900;
+  background-image: url('@LeicesterPIWC.png');
+  background-size:cover;
+  background-position: center;
+  font-family: 'Inter';
+  color: white;
+  z-index: 30000;
+  background-repeat: no-repeat;
+}
+#Privacy{
+  font-size: 30px;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0)0%, rgba(0,0,0,0.5)50%, rgba(0,0,0,1)100%);
+  position: relative;
+  height: 200px;
+  padding-left: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding-top: 300px;
+}
+.Privacy h1{
+  position: absolute;
+  left: 0;
+  padding-left: 15px;
+}
+.quotebox {
+  max-width: 600px;
+  background-color: rgb(212, 212, 253);
+  padding: 10px;
+  color: rgb(21, 21, 115);
+  border: 1px solid rgb(152, 152, 252);
+  border-left: 7px solid rgb(49, 49, 201);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.quote{
+  margin: 10px;
+}
+.speaker{
+  font-weight: 800;
+  text-align: right;
 }
 .signback{
   background: url('@LeicesterPIWC.png') no-repeat center center/cover;
@@ -2069,4 +2110,178 @@ opacity:none;
 #footer-close a:hover{
   opacity: 1;
 }
+.event-banner {
+  height: auto; /* Adjust height dynamically */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  padding: 10px; /* Add padding for better spacing */
+}
+
+#themepic {
+  flex: 0 0 auto;
+  width: 100%; /* Make the image full width */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Centre the image */
+  margin-top: 10px;
+}
+
+.event-details {
+  flex: 0 0 auto;
+  text-align: center; /* Centre-align text */
+  padding: 10px; /* Reduce padding */
+}
+
+.event-details h1 {
+  font-size: 1.5rem; /* Smaller font for better readability */
+  margin-top: 10px;
+}
+
+.quotebox {
+  max-width: 95%; /* Almost full width for readability */
+  margin: 10px auto; /* Centre the box */
+  padding: 8px; /* Compact padding */
+  font-size: 0.9rem; /* Adjust text size */
+}
+
+.quote {
+  margin: 5px; /* Reduce margin between quotes */
+}
+
+.speaker {
+  font-weight: bold;
+  text-align: right;
+  font-size: 0.85rem; /* Smaller font for the speaker */
+}
+@media screen and (max-width: 780px) {
+  /* Global Styles */
+  * {
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .header, .nav {
+    width: 100%;
+    padding: 15px;
+    font-size: smaller;
+    border-radius: 0;
+  }
+  .header.scrolled {
+    transform: none;
+    padding: 15px;
+    border-radius: 0;
+  }
+  .logo {
+    max-width: 200px;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(82, 82, 195, 0.9);
+    width: 100%;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  /* Home Section */
+  .home {
+    padding-top: 100px;
+    text-align: center;
+  }
+  .home button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Cards */
+  .Cards {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  .Cards img {
+    height: auto;
+  }
+  .Cards-sec {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Countdown */
+  #countdown {
+    width: 90%;
+    font-size: x-large;
+    padding: 20px;
+  }
+
+  /* Serve Section */
+  .serve-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .serve-card {
+    width: 90%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  /* Event Section */
+  .event {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .event img {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+  #event-info {
+    margin-left: 0;
+  }
+
+  /* Contact Section */
+  .contactus {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cont-group {
+    width: 90%;
+  }
+  .cont-group input, .cont-group textarea {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  .footer-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  #footer-group ul {
+    text-align: center;
+  }
+  .events h2{
+    display: none;
+  }
+}
+
 }

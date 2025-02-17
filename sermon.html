@@ -43,15 +43,129 @@
             <h1>Sermons</h1>
         </div>
     </div>
- <div class="videos">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/zKkAzhqAxaY?si=9FxU9THh5EfsbxPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/nU65dSIV9oc?si=WdQbg0jFqC3t_I4k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/glVVWOHtNcI?si=wmEcuIlaHhYtPvyK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/dqfquT4n6so?si=p5v5S49aBW7m_fe1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/egO_vNMnugM?si=BTwyrmmzUGQAN-rw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/EILbasMaFhc?si=2FSTMoByaZUUsqkJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/6JNHfKsX07s?si=YpTI1S_HQZjgcCLX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/YgruT8U21KA?si=xPxfTpyi95mgfgKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <style>
+            h2 {
+                text-align: center;
+                margin: 20px 0;
+                font-size: xx-large;
+            }
+    
+            #videos {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+                gap: 20px;
+                padding: 20px;
+                justify-items: center;
+            }
+    
+            .video-card {
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                text-align: center;
+                width: 100%;
+                max-width: 320px;
+                position: relative;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+    
+            .video-card img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                transition: opacity 0.3s ease;
+            }
+    
+            .video-card h3 {
+                font-size: 18px;
+                margin: 10px 0;
+                color: #333;
+            }
+    
+            .video-card iframe {
+                width: 100%;
+                height: 200px;
+                border: none;
+                display: none; /* Hide iframe initially */
+                opacity: 0;
+                transition: opacity 0.3s ease; /* Smooth opacity transition */
+            }
+    
+            .video-card:hover img {
+                opacity: 0.5; /* Fade thumbnail when hovered */
+            }
+    
+            .video-card a {
+                text-decoration: none; /* Remove default link styling */
+                color: inherit; /* Inherit color from parent */
+            }
+    
+            .video-card a.active iframe {
+                display: block; /* Show iframe */
+                opacity: 1; /* Fade iframe in */
+            }
+    
+            .video-card a.active img {
+                opacity: 0; /* Hide thumbnail when iframe is active */
+            }
+        </style>
+        <h2>Latest Videos</h2>
+        <div id="videos"></div>
+    
+        <script>
+            const API_KEY = 'AIzaSyDMoMTF-xY7FtTVDIkSnblshmgOwzfCSPk'; // Replace after testing
+            const CHANNEL_ID = 'UCEirtQPI4vk8jUgMNBiIoaw';
+            const maxResults = 95;
+    
+            async function fetchYouTubeVideos() {
+                try {
+                    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=${maxResults}&type=video`);
+                    const data = await response.json();
+
+                    if (data.error) {
+                        console.error("Error:", data.error.message);
+                        document.getElementById("videos").innerHTML = `<p style="color: red;">Error: ${data.error.message}</p>`;
+                        return;
+                    }
+    
+                    const videoContainer = document.getElementById("videos");
+                    videoContainer.innerHTML = ""; // Clear previous results
+    
+                    data.items.forEach(item => {
+                        if (item.id.kind === "youtube#video") {
+                            const videoId = item.id.videoId;
+                            const videoTitle = item.snippet.title;
+                            const thumbnailUrl = item.snippet.thumbnails.high.url;
+    
+                            // Skip videos that contain "Sunday Service" in the title
+                            if (videoTitle.includes("Sunday Service") || videoTitle.includes("Communion")|| videoTitle.includes("Akan")|| videoTitle.includes("2024")|| videoTitle.includes("2025")) {
+                                return; // Skip this video
+                            }
+
+    
+                            const videoElement = `
+                                <div class="video-card">
+                                    <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" class="video-link">
+                                        <img src="${thumbnailUrl}" alt="${videoTitle} Thumbnail">
+                                        <h3>${videoTitle}</h3>
+                                        <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0" frameborder="0" allowfullscreen></iframe>
+                                    </a>
+                                </div>
+                            `;
+                            videoContainer.innerHTML += videoElement;
+                        }
+                    });
+                } catch (error) {
+                    console.error("Error fetching YouTube videos:", error);
+                    document.getElementById("videos").innerHTML = `<p style="color: red;">Error fetching videos. Check console for details.</p>`;
+                }
+            }
+    
+            fetchYouTubeVideos();
+        </script>
+
     <div class="YT"><h1>Want to see more?</h1><br>Visit our YouTube Channel<br><img src="https://www.freeiconspng.com/thumbs/youtube-logo-png/hd-youtube-logo-png-transparent-background-20.png"><a href="https://youtube.com/@leicesterpiwc?si=nUphOXRtuVpw_OCU">Leicester PIWC YouTube</a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg></div>
 
 

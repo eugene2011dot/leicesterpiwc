@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="src/favicon.png" type="image/png">
+    <title>Leicester PIWC</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body class="body">
+    <header class="header">
+        <nav class="nav-container">
+            <article class="navigation">
+                <a class="logo" href="index.html">
+                    <img src="https://iili.io/deSk4dN.md.png" style="width: 100%; max-height: 200;" alt="Leicester PIWC" border="0">
+                </a>
+                <ul class="nav-links">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="services.html">Services</a></li>
+                    <li><a class="nav-link" href="events.html">Events</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li><a class="nav-link" href="sermon.html">Sermons</a></li>
+                    <li><a class="nav-link" href="store.html">Store</a></li>
+                    <li><a class="nav-link" href="https://forms.gle/7Dzdmu19pZexTU1Y8">Join Us</a></li>
+                    <li><a class="nav-link" href="https://copuk.org/" target="_blank">COPUK</a></li>
+                    <li><a class="nav-link" href="https://thecophq.org/" target="_blank">COPHQ</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">
+                    &#9776;
+                </div>
+            </article>
+        </nav>
+    </header>
+    <style>
+        .event-banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 500px;
+            position: relative;
+            color: white;
+        }
+
+        /* Dark blurred background */
+        .event-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.ibb.co/R40qk2z/Your-paragraph-text.png') no-repeat center center/cover;
+            filter: blur(5px) brightness(50%);
+            z-index: 0;
+        }
+
+        /* Left-side flyer image */
+        #themepic {
+            flex: 0 0 30%; /* Takes up 30% of the banner width */
+            height: 300px;
+            object-fit: cover;
+            z-index: 1;
+            margin-left: 40px;
+            margin-top: 120px;
+        }
+
+        /* Right-side event name */
+        .event-details {
+            flex: 0 0 50%; /* Takes up 50% of the banner width */
+            z-index: 1;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .event-details h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="event-banner">
+        <img id="themepic"></img>
+
+        <!-- Event name on the right -->
+        <div class="event-details">
+            <h1>THEME OF THE MONTH</h1>
+        </div>
+    </div>
+    <div>
+        <p>The theme of the month December is: <strong>Gratitude and Thanksgiving.</strong>
+            This month's theme was chosen to let us know the importance of showing Gratitude to all thos who help us.
+            This moth's base theme is:
+        </p>
+        <div style="position: relative; display: flex; justify-content: center; align-items: center; height: 100%;">
+            <blockquote class="quotebox">
+                <p class="quote">
+                    'Make sure that nobody pays back wrong for wrong, but always strive to do what is good for each other and for everyone else. Rejoice always, pray continually, give thanks in all circumstances; for this is God’s will for you in Christ Jesus. '
+                </p>
+                <p class="speaker">- 1 Thess. 5:15-18</p>
+            </blockquote>    
+        </div>
+    </div>
+</body>
+</html>
