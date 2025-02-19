@@ -370,35 +370,106 @@ marquee{
   position: relative;
   padding: 20px;
 }
-.home-event {
-  color: white;
-  display: flex;
-  flex-direction: row;
-  height: 400px;
-  overflow: hidden;
-  position: relative; /* Make it the positioning context */
-}
-
-.home-event-content {
-  width: 100%;
-  background-image: linear-gradient(to left, #000000, #000000, #000000, #000000,#000000,#00000059, #ffffff00);
-  z-index: 2;
+.slider {
   position: relative;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 50px;
   align-items: center;
 }
 
-.home-event-img {
-  position: absolute; /* Position it within the .home-event */
-  width: 700px; 
-  height: 400px; 
-  object-fit: cover;
-  z-index: 1; /* Ensure it's behind the content */
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  background: rgb(230, 228, 228) !important;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  position: absolute;
+  transition: opacity 1s ease-in-out;
 }
-.home-event-content-inner{
+
+.slider-container.active {
+  opacity: 1;
   position: relative;
-  left: 70;
+}
+
+.slider-image {
+  width: 500px;
+  height: 300px;
+  overflow: hidden; 
+  border-radius: 10px;
+}
+
+.slider-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.slider-image img:hover {
+  transform: scale(1.1); 
+}
+
+
+.slider-info {
+  flex: 2;
+  padding: 20px;
+}
+
+.slider-info h2 {
+  font-size: 2rem;
+  color: #00274D;
+  margin-bottom: 10px;
+}
+
+.slider-info p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Navigation Dots */
+.navigation-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+  background: #bbb;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #00274D;
+}
+.navigation-button {
+  text-align: center;
+  position: relative;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
 }
 #serve{
   background-color: rgb(41, 41, 145);
@@ -1259,29 +1330,51 @@ marquee{
 .toty-abt:hover  #toty-info{
   opacity:1;
 }
-.ministries{
+.ministries-container {
   display: flex;
-  background-color: rgb(41, 41, 145);
-  color: white;
-  width: 100%;
+  justify-content: space-around;
+  padding: 35px;
+  background: linear-gradient(0.25turn, #363C4D, #2E3988);
+
 }
-.ministries ul{
-  display: flex;
-  color: white;
-  gap: 20px;
+
+.ministry-item {
   text-align: center;
+  transition: transform 1s ease;
 }
-.ministries img{
-  width:200px;
-  height: 200px;
-  object-fit: contain;
-  background-color: white;
-  clip-path: circle(50%);
-  padding: 25px;
+.ministry-item:hover {
+  transform: scale(1.05);
 }
-img [src="src/youthlogo.png"]{
-  display: none;
+.ministry-link {
+  display: block;
+  text-decoration: none;
 }
+
+.ministry-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid grey;
+  margin-bottom: 10px;
+}
+
+.ministry-title {
+  font-size: 50px;
+  color: #ffd034;
+  font-weight: normal;
+}
+
+.ministry-title br {
+  display: block;
+}
+
+.ministry-title span{
+  font-family: 'Montserrat';
+  font-weight: 800;
+  color: #fff;
+}
+
 .Music h1{
   position: absolute;
   left: 0;
@@ -1721,13 +1814,15 @@ transition: background-color 0.3s ease;
 }
 
 .Cards {
-  display: none;
+  display: flex;
+  flex-direction: column;
   width: 90%;
   margin: auto;
   margin-bottom: 20px; /* Adjust card size and margin */
 }
 .Cards-sec{
-  display: none;
+  display: flex;
+  flex-direction: column;
 }
 #countdown {
   width: 50%; /* Adjust countdown width */
@@ -2283,5 +2378,16 @@ opacity:none;
     display: none;
   }
 }
+  .slider-container {
+      flex-direction: column;
+      text-align: center;
+  }
 
+  .slider-image {
+      max-width: 100%;
+  }
+
+  .slider-info {
+      padding-top: 10px;
+  }
 }

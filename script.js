@@ -112,3 +112,41 @@ document.addEventListener("DOMContentLoaded", () => {
 const currentYear = new Date().getFullYear();
 
     document.getElementById("cyear").textContent = currentYear;
+
+    var slides = document.querySelectorAll('.slider-container');
+    var dots = document.querySelectorAll('.dot');
+    var currentSlide = 0;
+    const interval = 9000;
+    var timer;
+    
+    function changeSlide(n) {
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].classList.remove('active');
+            dots[i].classList.remove('active');
+        }
+    
+        currentSlide = (n !== undefined) ? n : (currentSlide + 1) % slides.length;
+    
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+    
+    // Auto slide
+    function startSlider() {
+        timer = setInterval(() => changeSlide(), interval);
+    }
+    
+    // Manual slide control
+    function manualSlide(n) {
+        clearInterval(timer);
+        changeSlide(n);
+        startSlider();
+    }
+    
+    // Initialize the slider
+    document.addEventListener('DOMContentLoaded', function () {
+        slides[0].classList.add('active');
+        dots[0].classList.add('active');
+        startSlider();
+    });
+    

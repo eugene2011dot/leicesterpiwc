@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="src/favicon.png" type:"image/png">
+    <title>Leicester PIWC</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<!-- Website designed and built by Pentecost International Worship Centre(PIWC), Leicester -->
+<body class="body">
+    <header class="header">
+        <nav class="nav-container">
+            <article class="navigation">
+                <a class="logo" href="index.html">
+                    <img src="https://iili.io/deSk4dN.md.png" style="width: 100%; max-height: 200;" alt="Leicester PIWC" border="0">
+                </a>
+                <ul class="nav-links">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="services.html">Services</a></li>
+                    <li><a class="nav-link" href="events.html">Events</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li><a class="nav-link" href="sermon.html">Sermons</a></li>
+                    <li><a class="nav-link" href="store.html">Store</a></li>
+                    <li><a class="nav-link" href="https://forms.gle/7Dzdmu19pZexTU1Y8">Join Us</a></li>
+                    <li><a class="nav-link" href="https://copuk.org/" target="_blank">COPUK</a></li>
+                    <li><a class="nav-link" href="https://thecophq.org/" target="_blank">COPHQ</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">
+                    &#9776;
+                </div>
+            </article>
+        </nav>
+    </header>
+    <style>
+        .Youth {
+  width: 100%;
+  height: 100%;
+  font-weight: 900;
+  background-image: url('src/youth background.png');
+  background-size:cover;
+  background-position: center;
+  font-family: 'Inter';
+  color: white;
+  z-index: 30000;
+  background-repeat: no-repeat;
+}
+#Youth{
+  font-size: 30px;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0)0%, rgba(0,0,0,0.5)50%, rgba(0,0,0,1)100%);
+  position: relative;
+  height: 200px;
+  padding-left: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding-top: 300px;
+}
+.Youth h1{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-left: 15px;
+}
+.youthimgs img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grey-black-gradient-background {
+    background: linear-gradient(0.25turn, #363C4D, #2E3988);
+      padding-left: 49px;
+      padding-right: 49px;
+      color: white;
+    }
+
+    .vc_row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .vc_column_container {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .vc_column-inner {
+      text-align: left;
+    }
+
+    h2 {
+      font-size: 80px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .vc_inner {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    .wpb_text_column {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    /* Ensuring the event container behaves as a grid */
+.event-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates a responsive grid */
+  gap: 20px; /* Adjusts the gap between the items */
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Styling for individual event cards */
+.event-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+}
+
+.event-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.event-card .event-title {
+  margin: 10px 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.event-card .event-time {
+  color: #666;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.event-card .event-description {
+  color: #444;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+</style>
+    <div class="Youth">
+        <div id="Youth">
+            <h1>Youth Ministry</h1>
+        </div>
+    </div>
+<div class="youthimgs">
+    <img src="//copuk.org/wp-content/uploads/2024/01/youth-and-pensa-top-banner.png" 
+         alt="Youth and Pensa Banner">
+    <img src="https://copuk.org/wp-content/uploads/2024/01/youth-and-pensa-vision.png"  
+         alt="Youth and Pensa Banner">
+</div>
+<div class="youth-hero" style="margin: 10px;">
+    <h2 style="font-weight:900;color:#000000; font-size: 10vw; margin-bottom:10px; margin-top: 10px;">WHO ARE WE?</h2>
+    <strong style="font-weight:500;color:#000000; font-size: 3vw;">CHURCH OF PENTECOST LEICESTER YOUTH &amp; PENSA MINISTRY</strong>
+</div>
+<div class="vc_row wpb_row vc_row-fluid grey-black-gradient-background">
+    <div class="wpb_column vc_column_container vc_col-sm-12">
+      <div class="vc_column-inner">
+        <div class="wpb_wrapper">
+          <h2 style="color:#ffffff;">VISION</h2>
+          <p style="color:#ffffff;">To wholeheartedly transform young people towards possessing unyielding faith and stimulating an appetite for missions so as to reconstruct the parameters of thought, values, practices, social patterns, relationships, and decision-making in every sphere of society.</p>
+  
+          <div class="vc_row wpb_row vc_inner vc_row-fluid">
+            <div class="wpb_column vc_column_container vc_col-sm-4">
+              <h3 style="color:#ffffff;">LANGUAGE</h3>
+              <p style="color:#ffffff;">To habituate and equip our young people in doctrine so as to enable them to be fluent in the language of the kingdom.</p>
+            </div>
+            <div class="wpb_column vc_column_container vc_col-sm-4">
+              <h3 style="color:#ffffff;">SOCIAL INFLUENCE</h3>
+              <p style="color:#ffffff;">Dispatch our youth as social influencing channels through which faith in God, hope from the gospel, and the matchless love of God will emanate the nation’s youth culture, reach the lost, and transform society.</p>
+            </div>
+            <div class="wpb_column vc_column_container vc_col-sm-4">
+              <h3 style="color:#ffffff;">COMMUNITY</h3>
+              <p style="color:#ffffff;">Strengthen relationships, build a community, and engage missions as an extension of the community. The objective is to possess the nation’s youth as a community.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2 style="font-weight:900;color:#000000; font-size: 4vw; margin-bottom:10px; margin-top: 10px;">UPCOMING EVENTS</h2>
+  <div class="event-grid-container">
+    <div class="event-card">
+      <img src="https://copuk.org/wp-content/uploads/2020/09/106989101_3009566975806189_4327458918292748572_n@2x-303x300.png" alt="Event Image">
+      <p class="event-title">PENSA SUNDAY SERVICE</p>
+      <p class="event-time">THIS SUNDAY @ 12PM</p>
+      <p class="event-description">Sincere Praise & Worship and Inspiring Word. Streaming live on Facebook & YouTube – PENSA UK</p>
+    </div>
+    <div class="event-card">
+        <img src="src/favicon.png" alt="Event Image">
+        <p class="event-title">LOVE FEAST</p>
+        <p class="event-time">FRIDAY 23 FEBRUARY @8PM</p>
+        <p class="event-description">Sincere Praise & Worship and Inspiring Word. Streaming live on Facebook & YouTube – PENSA UK</p>
+      </div>
+  
+</div>
+  
