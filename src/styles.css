@@ -679,6 +679,44 @@ marquee{
     font-weight: 800;
     font-family: 'Inter';
 }
+#contact{
+  display: flex;
+  flex-direction:row ;
+}
+#contact iframe{
+  width: 50vw;
+  height: 100%;
+}
+#contact-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center ;
+  height: 600px;
+  background-color: #2E3988;
+  width: 50%;
+  color: #f1f1f1;
+}
+#contact-box h1{
+  font-size: 50px;
+  color: #ffd034;
+  font-weight: 800;
+  text-transform: uppercase;
+  position: relative;
+  
+}
+#contact-box h1::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 90px;
+  width: 50%;
+  height: 5px;
+  background-color: #ffd034;
+  transform: translateX(50%);
+}
+
 .contactus{
   font-family: 'Inter';
   margin: 50px;

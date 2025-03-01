@@ -101,7 +101,7 @@ fetch('header.html')
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const imageSource = "src/feb - theme of the month (Presentation).png"; // Path to the image
+    const imageSource = "src/march - theme (Presentation).png"; // Path to the image
 
     // Get the image element by its ID
     const imageElement = document.getElementById("themepic");
