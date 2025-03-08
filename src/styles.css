@@ -586,7 +586,7 @@ marquee{
   justify-content: center;
 }
 #footer-group{
-  margin-right: 10%;
+  margin-right: 6%;
 }
 #footer-group h2{
   font-weight: 900;
@@ -698,7 +698,7 @@ marquee{
   color: #f1f1f1;
 }
 #contact-box h1{
-  font-size: 50px;
+  font-size: 3vw;
   color: #ffd034;
   font-weight: 800;
   text-transform: uppercase;
@@ -721,32 +721,7 @@ marquee{
   font-family: 'Inter';
   margin: 50px;
 }
-.cont-group {
-  width: 100%;
-  max-width: 600px;
-  margin-bottom: 15px;
-}
 
-.cont-group label {
-  display: block;
-  margin-bottom: 4px;
-}
-
-.cont-group input, .cont-group textarea {
-  width: 500px;
-  height: auto;
-}
-
-.cont-group button {
-  padding: 10px 15px;
-  background-image: linear-gradient(to right, rgb(0, 0, 255), rgb(53, 36, 184));
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 800;
-  font-family: 'Inter';
-}
 .month {
     text-align: center;
     font-weight: 600;
@@ -1046,17 +1021,109 @@ marquee{
   align-items: center;
   justify-content: center;
 }
-.continfo{
-  display:inline;
-  font-size: xx-large;
-  width: fit-content;
-  line-height: normal;
+.cont-container{
+  width: 80%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  align-items: center;
+  justify-content:center ;
+  display: flex;
+}
+.cont-container .cont-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cont-container .cont-content .cont-left-side{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+.cont-content .cont-left-side::before{
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+}
+.cont-content .cont-left-side .details{
+  margin: 14px;
+  text-align: center;
+}
+.cont-content .cont-left-side .details i{
+  font-size: 30px;
+  color: #1f2d9c;
+  margin-bottom: 10px;
+}
+.cont-content .cont-left-side .details .cont-topic{
+  font-size: 18px;
+  font-weight: 500;
+}
+.cont-content .cont-left-side .details .cont-text-one,
+.cont-content .cont-left-side .details .cont-text-two{
+  font-size: 14px;
+  color: #afafb6;
+}
+.cont-container .cont-content .cont-right-side{
+  width: 75%;
+  margin-left: 75px;
+}
+.cont-content .cont-right-side .cont-topic-text{
+  font-size: 23px;
+  font-weight: 600;
+  color: #1f2d9c;
+}
+.cont-right-side .cont-input-box{
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+.cont-right-side .cont-input-box input,
+.cont-right-side .cont-input-box textarea{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+.cont-right-side .cont-message-box{
+  min-height: 110px;
+}
+.cont-right-side .cont-input-box textarea{
+  padding-top: 6px;
+}
+.cont-right-side .cont-button{
+  display: inline-block;
+  margin-top: 12px;
+}
+.cont-right-side .cont-button button[type="submit"]{
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #1f2d9c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.cont-button button[type="submit"]:hover{
+  background: #6779ff;
+}
 
-}
-.continfo{
-  border-left: rgb(85, 85, 195);
-  margin-left: 20px;
-}
 .Media {
   width: 100%;
   height: 100%;
@@ -1562,6 +1629,127 @@ header{
   left: 0;
   padding-left: 15px;
 }
+.church-nav{
+  width: 100vw;
+  font-size: larger;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.church-nav a{
+  text-decoration: none;
+  text-align: center;
+  margin-right: 20px;
+  color: inherit;
+}
+.church-nav button {
+  --color: #0c3be6;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+}
+
+.church-nav button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.church-nav button:hover a {
+  color: #fff;
+  transition: color 0.7s;
+}
+
+.church-nav button:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+.church-nav button:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.church-nav button:active:before {
+  background: #3a0ca3;
+  transition: background 0s;
+}
+
+#leichurches-type{
+  font-size: 200%;
+  color: #0056b3;
+  font-weight: 800;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  
+}
+#leichurches-type::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 50px;
+  width: 50%;
+  height: 5px;
+  background-color: #0056b3;
+  transform: translateX(50%);
+}
+.leichurches-container {
+  background: white;
+  padding: 20px 11%;
+  border-radius: 8px;
+  margin: auto;
+}
+.leichurches-main{
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.leichurches-logo {
+  height: 130px;
+}
+.leichurches-title {
+  color: #0077b6;
+  font-size: 25px;
+  font-weight: 800;
+}
+.leichurches-content {
+  font-size: 21px;
+}
+.leichurches-contact {
+  margin-top: 20px;
+}
+.leichurches-contact p {
+  margin: 5px 0;
+}
+.leichurches-contact a {
+  color: #1f2d9c;
+  text-decoration: none;
+}
+.leichurches-contact a:hover {
+  text-decoration: underline;
+}
+
 .quotebox {
   max-width: 600px;
   background-color: rgb(212, 212, 253);
@@ -2427,5 +2615,103 @@ opacity:none;
 
   .slider-info {
       padding-top: 10px;
+  }
+  #contact{
+    display: flex;
+    flex-direction:column ;
+  }
+  #contact iframe{
+    width: 100%;
+    height: 300px;
+  }
+  #contact-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    height: 600px;
+    background-color: #2E3988;
+    width: 100%;
+    color: #f1f1f1;
+  }
+  #contact-box h1{
+    font-size: 200%;
+    color: #ffd034;
+    font-weight: 800;
+    text-transform: uppercase;
+    position: relative;
+    
+  }
+  #contact-box h1::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 50px;
+    width: 50%;
+    height: 5px;
+    background-color: #ffd034;
+    transform: translateX(50%);
+  }
+    .cont-container{
+      width: 90%;
+      padding: 30px 40px 40px 35px ;
+    }
+    .cont-container .cont-content .cont-right-side{
+     width: 75%;
+     margin-left: 55px;
+  }
+  .cont-container{
+    margin: 40px 0;
+    height: 100%;
+  }
+  .cont-container .cont-content{
+    flex-direction: column-reverse;
+  }
+ .cont-container .cont-content .cont-left-side{
+   width: 100%;
+   flex-direction: row;
+   margin-top: 40px;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ .cont-container .cont-content .cont-left-side::before{
+   display: none;
+ }
+ .cont-container .cont-content .cont-right-side{
+   width: 100%;
+   margin-left: 0;
+ }
+  .leichurches-container {
+      padding: 15px;
+  }
+  .leichurches-title {
+      font-size: 21px;
+      text-align: center;
+  }
+  .leichurches-main{
+    display: flex;
+    flex-flow: column;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .leichurches-logo{
+    width: 175px;
+    height: 100%;
+  }
+  .leichurches-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .leichurches-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .leichurches-content{
+    text-align: center
   }
 }

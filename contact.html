@@ -43,45 +43,45 @@
             <h1>Contact Us</h1>
         </div>
     </div>
-    <div class="contactus">
-      <div id="email"><h1>Send us an Email</h1>
-        <form class="cont" action="https://formspree.io/f/mldrvabv" method="POST"></form>
-            <div class="cont-group">
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name" required>
+    <div class="cont-container">
+        <div class="cont-content">
+            <div class="cont-left-side">
+                <div class="cont-address details">
+                    <i class="fa fa-map-marker"></i>
+                    <div class="cont-topic">Address</div>
+                    <div class="cont-text-one">Kildare Street</div>
+                    <div class="cont-text-two">LE1 3FY</div>
+                </div>
+                <div class="cont-phone details">
+                    <i class="fa fa-phone"></i>
+                    <div class="cont-topic">Phone</div>
+                    <div class="cont-text-one">+44 712 123 456</div>
+                </div>
+                <div class="cont-email details">
+                    <i class="fa fa-envelope"></i>
+                    <div class="cont-topic">Email</div>
+                    <div class="cont-text-one">piwcleicester@gmail.com</div>
+                    <div class="cont-text-two">piwcleicester@copuk.org</div>
+                </div>
             </div>
-
-            <div class="cont-group">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required>
+            <div class="cont-right-side">
+                <div class="cont-topic-text">Send us a message</div>
+                <p>If you have any questions or would like to get in touch with us regarding our church services, events, or any support, please feel free to send us a message. We would love to assist you and help you in any way we can.</p>
+                <form class="form" action="https://formspree.io/f/mldrvabv" method="POST">
+                    <div class="cont-input-box">
+                        <input type="name" placeholder="Enter your name" name="name">
+                    </div>
+                    <div class="cont-input-box">
+                        <input type="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="cont-input-box cont-message-box">
+                        <textarea placeholder="Enter your message" required></textarea>
+                    </div>
+                    <div class="cont-button">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
             </div>
-
-            <div class="cont-group">
-                <label for="message">Message:</label>
-                <textarea id="message" rows="5" required></textarea>
-            </div>
-            <div class="cont-group">
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" required>
-            </div>
-
-            <div class="cont-group">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
-      </div>
-      <div class="continfo"style="border-left: 4px solid rgb(85, 85, 195); padding-left: 10px;">
-        <div class="callhead" >
-            <span class="fa fa-phone"></span>
-            <span class="call-text" style="font-weight: bolder;">Give Us a Call</span>
-            <p>0712 123 456</p>
-        </div><br>
-        <div class="callhead">
-            <i class="fa fa-map-marker"></i>
-            <span class="call-text" style="font-weight: bolder;">Find Us</span>
-            <p>Kildare Street<br>LE1 3FY<br>Leicester</p>
         </div>
-      </div>
-      
     </div>
     

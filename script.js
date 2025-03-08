@@ -18,9 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
 
     hamburger.addEventListener('click', () => {
+        // Toggle the visibility of the nav menu
         navLinks.classList.toggle('active');
+
+        // Check if the hamburger contains the hamburger character (&#9776;)
+        if (hamburger.innerHTML === "&#9776;") {
+            hamburger.innerHTML = "✖";  // Change to "X"
+        } 
+        else {
+            hamburger.innerHTML = "&#9776;";  // Change back to hamburger
+        }
     });
 });
+
 window.addEventListener('scroll', function() {
     var header = document.querySelector('.header'); // Targeting your specific header class
 
