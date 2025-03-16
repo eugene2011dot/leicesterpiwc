@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">    
+    <link rel="icon" href="../src/favicon.png" type: "image/png">
+    <title>Leicester District</title>
+    <link rel="stylesheet" href="../src/styles.css">
+    <link rel="stylesheet" href="district.css">
+</head>
+<style>
+    .hero{
+        overflow: hidden;
+    }
+    .video-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+      }
+      
+      .video-container video {
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      /* Content on top of video */
+      .content {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: white;
+        text-align: center;
+        font-size: 2rem;
+      }
+    </style>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <article class="navigation">
+                <a class="logo" href="leidistrict.html">
+                    <img src="../src/district logo.png" style="width: 100%; max-height: 200;" alt="Leicester District" border="0">
+                </a>
+                <ul class="nav-links" style="align-items: center;">
+                    <li><a class="nav-link" href="leidistrict.html">Home</a></li>
+                    <li><a class="nav-link" href="../about.html">About</a></li>
+                    <li><a class="nav-link" href="churches.html">Locations</a></li>
+                    <li><a class="nav-link" href="../events.html">Events</a></li>
+                    <li><a class="nav-link" href="../contact.html">Contact</a></li>
+                    <li><a class="nav-link" href="https://forms.gle/7Dzdmu19pZexTU1Y8">Join Us</a></li>
+                    <li><a class="nav-link" href="https://copuk.org/" target="_blank">COPUK</a></li>
+                    <li><a class="nav-link" href="https://thecophq.org/" target="_blank">COPHQ</a></li>
+                    <li><a class="nav-link" href="../index.html"><img src="../src/leipialt-logo.png" style="width: 100%; height: 50px;"></a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">
+                    &#9776;
+                </div>
+            </article>
+        </nav>
+    </header>
+    <div class="hero">
+        <div class="video-container">
+            <video autoplay loop muted playsinline>
+                <source src="../src/hero videodistrict.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    
+        <div class="content">
+            <h1 class="h1">Welcome to <br>COP Leicester District</h1>
+            <p id="wecome"><i><b>You are welcome to join us in worship and fellowship</b></i></p>
+            <button id="welcome"><a href="https://forms.gle/7Dzdmu19pZexTU1Y8" target="_blank">Help us know you more</a></button> 
+         </div>
+    </div>
+
+    <div class="locations">
+        <div id="locationtitle"><h2>Churches In Our District</h2> <p style="color: rgb(108, 109, 110); font-style: italic; font-size: 25px;">1 church, 6 cities, 7 campuses</p> 
+            <button class="learn-more">
+            <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+            </span>
+            <span class="button-text"><a href="churches.html">See All</a></span>
+          </button>
+        </div>
+        <div class="location-container">
+            <div class="church-card">
+                <img src="../src/@LeicesterPIWC.png" alt="Church">
+                <h2>Leicester PIWC</h2>
+                <p>Leicester City Centre, LEI</p>
+              
+                <p class="section-title">Address</p>
+                <p>Kildare Street<br>LE1 3FY, Leicester</p>
+              
+                <div id="bottom" style="display: flex;">
+                    <span style="flex-direction: column;">
+                        <p class="section-title">Sunday Worship</p>
+                    <p>10:30 am, 12:00 pm</p>
+                    </span>
+                    <div class="icon" style="margin-left: 40%;"><a class="fas fa-map-marker" href="https://maps.app.goo.gl/yeEps8azCCKMfVRT8"></a></div>
+                </div>
+              </div>
+
+              <div class="church-card">
+                <img src="../src/@LeicesterPIWC.png" alt="Church">
+                <h2>Leicester Bethel Assembly</h2>
+                <p>Leicester City Centre, LEI</p>
+              
+                <p class="section-title">Address</p>
+                <p>Kildare Street<br>LE1 3FY, Leicester</p>
+              
+                <div id="bottom" style="display: flex;">
+                    <span style="flex-direction: column;">
+                        <p class="section-title">Sunday Worship</p>
+                    <p>1:00 pm, 4:00 pm</p>
+                    </span>
+                    <div class="icon" style="margin-left: 40%;"><a class="fas fa-map-marker" href="https://maps.app.goo.gl/yeEps8azCCKMfVRT8"></a></div>
+                </div>
+              </div>
+
+              <div class="church-card">
+                <img src="../src/@LeicesterPIWC.png" alt="Church">
+                <h2>Leicester PIWC</h2>
+                <p>Leicester City Centre, LEI</p>
+              
+                <p class="section-title">Address</p>
+                <p>Kildare Street<br>LE1 3FY, Leicester</p>
+              
+                <div id="bottom" style="display: flex;">
+                    <span style="flex-direction: column;">
+                        <p class="section-title">Sunday Worship</p>
+                    <p>9:00 am, 11:00 am</p>
+                    </span>
+                    <div class="icon" style="margin-left: 40%;"><a class="fas fa-map-marker" href="https://maps.app.goo.gl/yeEps8azCCKMfVRT8"></a></div>
+                </div>
+              </div>
+        </div>                                                              
+                
+            
+        </div>
+    </div>
+    <div class="district-newsletter">
+        <img src="https://dev-12stone.pantheonsite.io/wp-content/uploads/2021/12/email.png" alt="Email Icon" class="newsletter-icon">
+        <h2>Never miss an update.</h2>
+        <p>Jump into our email list with <strong>68,714+</strong> amazing people to make sure you never miss a 12Stone teaching or update.</p>
+    
+        <form>
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" required>
+    
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" required>
+    
+            <label for="email">Email *</label>
+            <input type="email" id="email" required>
+    
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone">
+    
+            <label for="campus">Campus</label>
+            <select id="campus">
+                <option>---Choose Campus---</option>
+            </select>
+    
+            <button type="submit" id="newsletter-button">Submit</button>
+        </form>
+    </div>
+    
+</body>

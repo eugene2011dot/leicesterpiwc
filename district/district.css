@@ -1,87 +1,310 @@
-*{
-    font-family: 'Inter', sans-serif;
-  }
-  header{
-    position: fixed;
-    margin: auto;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .header, .nav {
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(102, 102, 102, 0.5));
-      font-family: 'Inter';
-      max-width: 1100px;
-      width: 100%;
-      color: white;
-      font-weight: 900;
-      text-decoration: none;
-      padding: 20px;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      border-radius: 20px;
-  }
-  body {
-    margin: 0;
-    overflow-x: hidden;
-  }
-  
-  .header.scrolled{
-    background-image: linear-gradient(to right, rgb(82, 82, 195), rgb(53, 36, 184));
-      color: white;
-      padding: 20px;
-      font-weight: 900;
-      text-decoration: none;
-      position: fixed;
-      width: 100%;
-      height: auto;
-      z-index: 1000;
-      transform: translateX(-50%);
-      border-radius: 0px;
-      max-width: 100%;
-      margin: auto;
-      animation: slide-in-from-top 0.5s ease-out forwards;
-  }
-  .header.scrolled .logo{
-    padding-left: 20%;
-  }
-  .header.scrolled .nav-links{
-    padding-right: 20%;
-  }
-  .headerlive{
-      background-image: linear-gradient(to right, rgb(82, 82, 195), rgb(53, 36, 184));
-      color: white;
-      padding: 20px;
-      font-weight: 900;
-      text-decoration: none;
-      position: fixed;
-      width: 100%;
-      height: auto;
-      z-index: 1000;
-      transform: translateX(-50%);
-      border-radius: 0px;
-      max-width: 100%;
-  }
-  .headerlive .logo{
-    padding-left: 20%;
-  }
-  .headerlive .nav-links{
-    padding-right: 20%;
-  }
-  .hamburger{
-    font-size: 30px;
-    margin-right: 50px;
-    display: none;
-    transition: color, font-size 0.3s ease;
-  }
-  .hamburger:hover{
-    color:#ffea00;
-    font-size: 35px;
-  }
-  html, body, header {
-    margin: 0;
+#welcome {
+  all: unset;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.6em 2em;
+  border: rgb(94, 104, 255) solid 0.15em;
+  border-radius: 0.25em;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+}
+#welcome a{
+    color: inherit;
+    text-decoration: none;
+}
+#welcome a {
+  z-index: 1;
+}
+
+#welcome:hover {
+  color: #ffffff;
+}
+
+#welcome:active {
+  border-color: rgb(42, 57, 255);
+}
+
+#welcome::after, #welcome::before {
+  content: "";
+  position: absolute;
+  width: 15em;
+  aspect-ratio: 1;
+  background: rgb(64, 77, 255);
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+#welcome::before {
+  left: 0;
+  transform: translateX(-14em);
+}
+
+#welcome::after {
+  right: 0;
+  transform: translateX(14em);
+}
+
+#welcome:hover:before {
+  transform: translateX(1em);
+}
+
+#welcome:hover:after {
+  transform: translateX(-1em);
+}
+
+#welcome:active:before,
+#welcome:active:after {
+  background: rgb(4, 84, 189);
+}
+#locationtitle h2{
+    font-size: 54px;
+    width: 500px;
+}
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
     padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    font-size: 20px;
+   }
+   button a{
+    color: inherit;
+    text-decoration: none;
+   }
+   button.learn-more {
+    width: 12rem;
+    height: auto;
+   }
+   
+   button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: rgb(27, 27, 173);
+    border-radius: 1.625rem;
+   }
+   
+   button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: rgb(1, 1, 95);
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   button:hover .circle {
+    width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-text {
+    color: #fff;
+   }
+.locations{
+    background-color: #e2e2e2;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+.location-container{
+    margin-left: 40px;
+    display: flex;
+}
+#locationtitle{
+    flex-direction: column;
+}
+.church-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    transition: transform 0.3s ease;
+    margin-right: 3%;
   }
   
+  .church-card img {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+  }
+  
+  .church-card h2 {
+    color: rgb(1, 1, 95);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .church-card p {
+    color: #555;
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .church-card .section-title {
+    color: rgb(1, 1, 95);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+  
+  .church-card .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 2px solid rgb(63, 63, 182);
+    color: rgb(63, 63, 182);
+    font-size: 1.2rem;
+    margin-top: 15px;
+    transition: background-color  0.3s ease;
+  }
+  .church-card .icon:hover {
+    background-color: rgb(63, 63, 182);
+    color: rgb(255, 255, 255);
+  }
+  .church-card a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .church-card:hover{
+    transform: scale(1.05);
+  }
+  .district-newsletter {
+    z-index: 5;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(73, 73, 196);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-icon {
+    filter: invert(100%);
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.district-newsletter h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(220, 220, 250);
+}
+
+.district-newsletter p {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: rgb(1, 1, 95);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+    margin-top: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#newsletter-button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(94, 104, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#newsletter-button:hover {
+    background-color: rgb(42, 57, 255);
+}
+ 

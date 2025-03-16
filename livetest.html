@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Videos</title>
+</head>
+    <body>
+        <div id="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pd3p2sTPW5M?si=OZnO2drWLUdSFEfP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </body>
+    <style>
+        body {
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#video-container {
+    width: 100vw; /* Makes it wide like YouTube Cinema Mode */
+    max-width: 100vw;
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    border: none;
+}
+
+    </style>        
