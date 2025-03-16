@@ -2714,4 +2714,36 @@ opacity:none;
   .leichurches-content{
     text-align: center
   }
+  .location-container{
+    display: flex;
+    flex-direction: column;
+}
+.locations{
+  background-color: #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+.church-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  width: 100vw;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  font-family: Arial, sans-serif;
+  transition: transform 0.3s ease;
+  margin-bottom: 3%;
+}
+#locationtitle{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+#locationtitle h2{
+  text-align: center;
+}
 }
